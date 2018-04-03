@@ -17,9 +17,7 @@ public class PointClick : MonoBehaviour {
             move = true;
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 relativePos = new Vector2(mousePos.x, y);
-            Debug.Log("Transform[x: " + pos.x + ", y: " + y + "] Mouse[x: " + relativePos.x + ", y: " + relativePos.y + "]");
             Vector2 dir = relativePos - pos;
-            Debug.Log("Direction[x: " + dir.x + ", y: " + dir.y + "]");
             float distance = Vector2.Distance(pos, relativePos);
             RaycastHit2D hit = Physics2D.Raycast(pos, dir, distance, obstacles);
             if (hit.collider != null) {
