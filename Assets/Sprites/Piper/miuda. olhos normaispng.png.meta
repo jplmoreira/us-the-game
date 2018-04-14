@@ -1,0 +1,197 @@
+fileFormatVersion: 2
+guid: ab142fbc1992450419ea776ec6a8af3a
+timeCreated: 1523672626
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: miuda. olhos normaispng_0
+    21300002: miuda. olhos normaispng_1
+    21300004: miuda. olhos normaispng_2
+    21300006: miuda. olhos normaispng_3
+    21300008: miuda. olhos normaispng_4
+    21300010: miuda. olhos normaispng_5
+    21300012: miuda. olhos normaispng_6
+    21300014: miuda. olhos normaispng_7
+    21300016: miuda. olhos normaispng_8
+    21300018: miuda. olhos normaispng_9
+    21300020: miuda. olhos normaispng_10
+    21300022: miuda. olhos normaispng_11
+    21300024: miuda. olhos normaispng_12
+    21300026: miuda. olhos normaispng_13
+    21300028: miuda. olhos normaispng_14
+    21300030: miuda. olhos normaispng_15
+    21300032: miuda. olhos normaispng_16
+    21300034: miuda. olhos normaispng_17
+    21300036: miuda. olhos normaispng_18
+    21300038: miuda. olhos normaispng_19
+    21300040: miuda. olhos normaispng_20
+    21300042: miuda. olhos normaispng_21
+    21300044: miuda. olhos normaispng_22
+    21300046: miuda. olhos normaispng_23
+    21300048: miuda. olhos normaispng_24
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 500
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: miuda. olhos normaispng_0
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 1237
+        width: 455
+        height: 1010
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: miuda. olhos normaispng_2
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1238
+        width: 460
+        height: 996
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: miuda. olhos normaispng_4
+      rect:
+        serializedVersion: 2
+        x: 2775
+        y: 1237
+        width: 458
+        height: 997
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: miuda. olhos normaispng_6
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 1238
+        width: 460
+        height: 988
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: miuda. olhos normaispng_12
+      rect:
+        serializedVersion: 2
+        x: 2107
+        y: 1237
+        width: 460
+        height: 985
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: miuda. olhos normaispng_22
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 0
+        width: 460
+        height: 996
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
