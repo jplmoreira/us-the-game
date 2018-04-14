@@ -6,6 +6,7 @@ public class Follow : MonoBehaviour {
 
     private GameObject player;       //Public variable to store a reference to the player game object
     private Vector3 offset;         //Private variable to store the offset distance between the player and camera
+    private bool focus = true;
 
     private void Awake() {
         GameObject[] characters = GameObject.FindGameObjectsWithTag("Character");
@@ -25,8 +26,8 @@ public class Follow : MonoBehaviour {
     // LateUpdate is called after Update each frame
     void LateUpdate() {
         // Set the position of the camera's transform to be the same as the player's, but offset by the calculated offset distance.
-
-        transform.position = player.transform.position + offset;
+        if (focus)
+            transform.position = player.transform.position + offset;
     }
 
     public IEnumerator SwapFocus() {
@@ -41,4 +42,6 @@ public class Follow : MonoBehaviour {
             player = characters[0];
         }
     }
+
+    public void Focus(bool f) { focus = f; }
 }
