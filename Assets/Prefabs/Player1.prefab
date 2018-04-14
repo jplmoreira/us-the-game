@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 61357464606522328}
   - component: {fileID: 50146756179726328}
   - component: {fileID: 114182841284836688}
+  - component: {fileID: 114085253760595974}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Character
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1181266101678446}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.84, y: -1.723, z: 0}
+  m_LocalPosition: {x: -2.849, y: -1.81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -88,6 +89,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.94017076, y: 2.0037992}
   m_EdgeRadius: 0
+--- !u!114 &114085253760595974
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1181266101678446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87a339c354414a941bd6768070bfd26a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Piper
+  options:
+  - color: {r: 0.3158521, g: 0.3158521, b: 0.9338235, a: 1}
+    sprite: {fileID: 21300000, guid: dd3c11706206c064f8b1c38e976a3bc9, type: 3}
+    title: Pick up
+  - color: {r: 0.2729715, g: 0.875, b: 0.19301468, a: 1}
+    sprite: {fileID: 21300000, guid: 6190ba2ff7304db4cbb3cff97ec57206, type: 3}
+    title: Climb
+  - color: {r: 0.9117647, g: 0.870615, b: 0.31509513, a: 1}
+    sprite: {fileID: 21300000, guid: 92cd7392e3a48134a89a2d33fb37fc60, type: 3}
+    title: Push
+  - color: {r: 0.9705882, g: 0.44247407, b: 0.44247407, a: 1}
+    sprite: {fileID: 21300000, guid: c07b34dd63a037041be51d324a605dd9, type: 3}
+    title: Unlock
+  - color: {r: 1, g: 0.30882353, b: 0.9237322, a: 1}
+    sprite: {fileID: 21300000, guid: 721b63f576d15a74987c7d325bb92166, type: 3}
+    title: Open
 --- !u!114 &114182841284836688
 MonoBehaviour:
   m_ObjectHideFlags: 1
