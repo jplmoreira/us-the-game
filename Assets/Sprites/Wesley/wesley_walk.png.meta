@@ -1,10 +1,15 @@
 fileFormatVersion: 2
-guid: ea44ff77e0170984da44eb5e53446aef
-timeCreated: 1523678207
+guid: a548a24f84e72df42b793a4570a3418a
+timeCreated: 1523722384
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: idle_scared_wesley_0
+    21300000: wesley_walk_0
+    21300002: wesley_walk_2
+    21300004: wesley_walk_4
+    21300006: wesley_walk_6
+    21300008: wesley_walk_7
+    21300010: wesley_walk_14
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -46,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 450
+  spritePixelsToUnits: 500
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -82,13 +87,83 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: idle_scared_wesley_0
+      name: wesley_walk_0
       rect:
         serializedVersion: 2
-        x: 105
-        y: 1233
-        width: 458
-        height: 936
+        x: 2759
+        y: 1239
+        width: 487
+        height: 1094
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wesley_walk_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1236
+        width: 491
+        height: 1067
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wesley_walk_4
+      rect:
+        serializedVersion: 2
+        x: 1436
+        y: 1238
+        width: 489
+        height: 1065
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wesley_walk_6
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 1236
+        width: 484
+        height: 1067
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wesley_walk_7
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 1228
+        width: 495
+        height: 1069
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wesley_walk_14
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 0
+        width: 477
+        height: 1082
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

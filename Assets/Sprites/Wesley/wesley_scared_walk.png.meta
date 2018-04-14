@@ -1,16 +1,17 @@
 fileFormatVersion: 2
-guid: 2c4f5ef038dd9eb4a8278a9beba07360
-timeCreated: 1523677576
+guid: 0374ed7c78cc3bb43986199f53594259
+timeCreated: 1523722379
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: walk_scared_newt_0
-    21300002: walk_scared_newt_1
-    21300004: walk_scared_newt_2
-    21300006: walk_scared_newt_3
-    21300008: walk_scared_newt_5
-    21300010: walk_scared_newt_11
-    21300012: walk_scared_newt_12
+    21300000: wesley_scared_walk_0
+    21300002: wesley_scared_walk_2
+    21300004: wesley_scared_walk_3
+    21300006: wesley_scared_walk_4
+    21300008: wesley_scared_walk_5
+    21300010: wesley_scared_walk_6
+    21300012: wesley_scared_walk_7
+    21300014: wesley_scared_walk_14
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -52,7 +53,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 600
+  spritePixelsToUnits: 500
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -88,55 +89,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: walk_scared_newt_0
+      name: wesley_scared_walk_0
       rect:
         serializedVersion: 2
-        x: 79
-        y: 1238
-        width: 552
-        height: 1118
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: walk_scared_newt_1
-      rect:
-        serializedVersion: 2
-        x: 720
-        y: 1236
-        width: 551
-        height: 1107
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: walk_scared_newt_2
-      rect:
-        serializedVersion: 2
-        x: 1371
-        y: 1240
-        width: 552
-        height: 1108
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: walk_scared_newt_3
-      rect:
-        serializedVersion: 2
-        x: 2043
+        x: 2759
         y: 1239
-        width: 552
-        height: 1112
+        width: 487
+        height: 1094
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,13 +103,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: walk_scared_newt_5
+      name: wesley_scared_walk_2
       rect:
         serializedVersion: 2
-        x: 2714
-        y: 1235
-        width: 552
-        height: 1129
+        x: 96
+        y: 1236
+        width: 491
+        height: 1067
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,13 +117,55 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: walk_scared_newt_12
+      name: wesley_scared_walk_4
       rect:
         serializedVersion: 2
-        x: 58
+        x: 1436
+        y: 1238
+        width: 489
+        height: 1065
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wesley_scared_walk_6
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 1236
+        width: 484
+        height: 1067
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wesley_scared_walk_7
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 1228
+        width: 495
+        height: 1069
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wesley_scared_walk_14
+      rect:
+        serializedVersion: 2
+        x: 106
         y: 0
-        width: 551
-        height: 1125
+        width: 477
+        height: 1082
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f99e386a3b041ee49a8522d56cf87239
-timeCreated: 1523678211
+guid: 04ad0b85925c38243bf9df2fdcdb44cc
+timeCreated: 1523722381
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: idle_wesley_0
+    21300000: wesley_idle_0
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 450
+  spritePixelsToUnits: 500
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -82,13 +82,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: idle_wesley_0
+      name: wesley_idle_0
       rect:
         serializedVersion: 2
-        x: 105
+        x: 93
         y: 1233
-        width: 458
-        height: 936
+        width: 490
+        height: 1100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
