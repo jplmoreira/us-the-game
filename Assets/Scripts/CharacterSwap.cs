@@ -13,6 +13,8 @@ public class CharacterSwap : MonoBehaviour {
     public Transform player4;
     private Vector3 pos4;
 
+    public GameObject cam;
+
     private int currNum;
 
     private void Awake() {
@@ -44,6 +46,7 @@ public class CharacterSwap : MonoBehaviour {
             Destroy(currChar);
             Instantiate(player1, pos1, Quaternion.identity);
             currNum = 1;
+            StartCoroutine(cam.GetComponent<Follow>().SwapFocus());
         }
         if (Input.GetKeyDown(KeyCode.Alpha2) && currNum != 2) {
             characters = GameObject.FindGameObjectsWithTag("Character");
@@ -56,6 +59,7 @@ public class CharacterSwap : MonoBehaviour {
             Destroy(currChar);
             Instantiate(player2, pos2, Quaternion.identity);
             currNum = 2;
+            StartCoroutine(cam.GetComponent<Follow>().SwapFocus());
         }
         if (Input.GetKeyDown(KeyCode.Alpha3) && currNum != 3) {
             characters = GameObject.FindGameObjectsWithTag("Character");
@@ -68,6 +72,7 @@ public class CharacterSwap : MonoBehaviour {
             Destroy(currChar);
             Instantiate(player3, pos3, Quaternion.identity);
             currNum = 3;
+            StartCoroutine(cam.GetComponent<Follow>().SwapFocus());
         }
         if (Input.GetKeyDown(KeyCode.Alpha4) && currNum != 4) {
             characters = GameObject.FindGameObjectsWithTag("Character");
@@ -80,6 +85,7 @@ public class CharacterSwap : MonoBehaviour {
             Destroy(currChar);
             Instantiate(player4, pos4, Quaternion.identity);
             currNum = 4;
+            StartCoroutine(cam.GetComponent<Follow>().SwapFocus());
         }
     }
 
