@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 61974367941260290}
   - component: {fileID: 50162768597532134}
   - component: {fileID: 114401010371048642}
+  - component: {fileID: 95355821237048510}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Character
@@ -88,6 +89,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.9969349}
   m_EdgeRadius: 0
+--- !u!95 &95355821237048510
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1191639986239430}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9db4da575e9d98349ba275a376aa8f20, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114401010371048642
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -99,7 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 801fab1501c1ca94f9a50d6061734145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 3
   obstacles:
     serializedVersion: 2
     m_Bits: 256
