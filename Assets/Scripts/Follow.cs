@@ -26,19 +26,17 @@ public class Follow : MonoBehaviour {
     // LateUpdate is called after Update each frame
     void LateUpdate() {
         // Set the position of the camera's transform to be the same as the player's, but offset by the calculated offset distance.
-        if (focus)
+		if (focus && player != null)
             transform.position = player.transform.position + offset;
     }
 
     public IEnumerator SwapFocus() {
-        Debug.Log("Focusing camera...");
         yield return new WaitForSeconds(0.1f);
         GameObject[] characters = GameObject.FindGameObjectsWithTag("Character");
         if (characters.Length != 1) {
             Debug.LogError("More than one character Active!");
             StartCoroutine(SwapFocus());
         } else {
-            Debug.Log("Found new char");
             player = characters[0];
         }
     }
