@@ -1,15 +1,14 @@
 fileFormatVersion: 2
-guid: d1354c10412384a77b78c0a65efb9c83
-timeCreated: 1523810634
+guid: 12100a18b52474b5f9131fac5c6370f9
+timeCreated: 1524322086
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: walking_chuck_0
-    21300002: walking_chuck_3
-    21300004: walking_chuck_4
-    21300006: walking_chuck_5
-    21300008: walking_chuck_9
-    21300010: walking_chuck_10
+    21300000: walking_chuck_1
+    21300002: walking_chuck_4
+    21300004: walking_chuck_5
+    21300006: walking_chuck_10
+    21300008: walking_chuck_11
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -106,29 +105,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: walking_chuck_0
+      name: walking_chuck_1
       rect:
         serializedVersion: 2
-        x: 1004
-        y: 1236
-        width: 802
-        height: 1047
+        x: 0
+        y: 1241
+        width: 833
+        height: 1032
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: walking_chuck_3
-      rect:
-        serializedVersion: 2
-        x: 2002
-        y: 1236
-        width: 777
-        height: 1036
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -137,26 +122,26 @@ TextureImporter:
       name: walking_chuck_4
       rect:
         serializedVersion: 2
-        x: 3
+        x: 1011
         y: 1234
-        width: 830
-        height: 1031
+        width: 794
+        height: 1026
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: walking_chuck_9
+      name: walking_chuck_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 834
-        height: 1105
+        x: 2008
+        y: 1234
+        width: 771
+        height: 1032
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -165,12 +150,26 @@ TextureImporter:
       name: walking_chuck_10
       rect:
         serializedVersion: 2
-        x: 986
+        x: 14
         y: 0
-        width: 843
-        height: 1100
+        width: 801
+        height: 1059
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: walking_chuck_11
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 0
+        width: 815
+        height: 1061
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

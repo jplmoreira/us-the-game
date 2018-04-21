@@ -1,34 +1,16 @@
 fileFormatVersion: 2
-guid: ab142fbc1992450419ea776ec6a8af3a
-timeCreated: 1523672626
+guid: e5f73f2842afb4e1394cc732ff970187
+timeCreated: 1524320768
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: miuda. olhos normaispng_0
-    21300002: miuda. olhos normaispng_1
-    21300004: miuda. olhos normaispng_2
-    21300006: miuda. olhos normaispng_3
-    21300008: miuda. olhos normaispng_4
-    21300010: miuda. olhos normaispng_5
-    21300012: miuda. olhos normaispng_6
-    21300014: miuda. olhos normaispng_7
-    21300016: miuda. olhos normaispng_8
-    21300018: miuda. olhos normaispng_9
-    21300020: miuda. olhos normaispng_10
-    21300022: miuda. olhos normaispng_11
-    21300024: miuda. olhos normaispng_12
-    21300026: miuda. olhos normaispng_13
-    21300028: miuda. olhos normaispng_14
-    21300030: miuda. olhos normaispng_15
-    21300032: miuda. olhos normaispng_16
-    21300034: miuda. olhos normaispng_17
-    21300036: miuda. olhos normaispng_18
-    21300038: miuda. olhos normaispng_19
-    21300040: miuda. olhos normaispng_20
-    21300042: miuda. olhos normaispng_21
-    21300044: miuda. olhos normaispng_22
-    21300046: miuda. olhos normaispng_23
-    21300048: miuda. olhos normaispng_24
+    21300000: walking_scared_piper_0
+    21300002: walking_scared_piper_2
+    21300004: walking_scared_piper_4
+    21300006: walking_scared_piper_6
+    21300008: walking_scared_piper_11
+    21300010: walking_scared_piper_12
+    21300012: walking_scared_piper_20
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -70,9 +52,8 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 500
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spritePixelsToUnits: 500
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -102,11 +83,31 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: miuda. olhos normaispng_0
+      name: walking_scared_piper_0
       rect:
         serializedVersion: 2
         x: 107
@@ -120,13 +121,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: miuda. olhos normaispng_2
+      name: walking_scared_piper_2
       rect:
         serializedVersion: 2
-        x: 792
-        y: 1238
-        width: 460
-        height: 996
+        x: 768
+        y: 1240
+        width: 458
+        height: 995
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,7 +135,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: miuda. olhos normaispng_4
+      name: walking_scared_piper_4
       rect:
         serializedVersion: 2
         x: 2775
@@ -148,7 +149,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: miuda. olhos normaispng_6
+      name: walking_scared_piper_6
       rect:
         serializedVersion: 2
         x: 1431
@@ -162,7 +163,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: miuda. olhos normaispng_12
+      name: walking_scared_piper_11
       rect:
         serializedVersion: 2
         x: 2107
@@ -176,10 +177,10 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: miuda. olhos normaispng_22
+      name: walking_scared_piper_20
       rect:
         serializedVersion: 2
-        x: 107
+        x: 89
         y: 0
         width: 460
         height: 996
