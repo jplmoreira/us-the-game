@@ -1,34 +1,20 @@
 fileFormatVersion: 2
-guid: c0a4323c85a9fb84aa7200d80671265e
-timeCreated: 1523672629
+guid: 8239b8caec2d54bec9c7b50c93429470
+timeCreated: 1524320766
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: miuda olhos espantados_0
-    21300002: miuda olhos espantados_1
-    21300004: miuda olhos espantados_2
-    21300006: miuda olhos espantados_3
-    21300008: miuda olhos espantados_4
-    21300010: miuda olhos espantados_5
-    21300012: miuda olhos espantados_6
-    21300014: miuda olhos espantados_7
-    21300016: miuda olhos espantados_8
-    21300018: miuda olhos espantados_9
-    21300020: miuda olhos espantados_10
-    21300022: miuda olhos espantados_11
-    21300024: miuda olhos espantados_12
-    21300026: miuda olhos espantados_13
-    21300028: miuda olhos espantados_14
-    21300030: miuda olhos espantados_15
-    21300032: miuda olhos espantados_16
-    21300034: miuda olhos espantados_17
-    21300036: miuda olhos espantados_18
-    21300038: miuda olhos espantados_19
-    21300040: miuda olhos espantados_20
-    21300042: miuda olhos espantados_21
-    21300044: miuda olhos espantados_22
-    21300046: miuda olhos espantados_23
-    21300048: miuda olhos espantados_24
+    21300000: walking_piper_0
+    21300002: walking_piper_2
+    21300004: walking_piper_3
+    21300006: walking_piper_4
+    21300008: walking_piper_6
+    21300010: walking_piper_9
+    21300012: walking_piper_12
+    21300014: walking_piper_13
+    21300016: walking_piper_15
+    21300018: walking_piper_17
+    21300020: walking_piper_22
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -70,9 +56,8 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 500
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spritePixelsToUnits: 500
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -102,11 +87,31 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: miuda olhos espantados_0
+      name: walking_piper_0
       rect:
         serializedVersion: 2
         x: 107
@@ -120,7 +125,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: miuda olhos espantados_2
+      name: walking_piper_2
       rect:
         serializedVersion: 2
         x: 792
@@ -134,7 +139,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: miuda olhos espantados_4
+      name: walking_piper_4
       rect:
         serializedVersion: 2
         x: 2775
@@ -148,10 +153,10 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: miuda olhos espantados_6
+      name: walking_piper_6
       rect:
         serializedVersion: 2
-        x: 1431
+        x: 1429
         y: 1238
         width: 460
         height: 988
@@ -162,7 +167,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: miuda olhos espantados_12
+      name: walking_piper_12
       rect:
         serializedVersion: 2
         x: 2107
@@ -176,7 +181,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: miuda olhos espantados_22
+      name: walking_piper_22
       rect:
         serializedVersion: 2
         x: 107
