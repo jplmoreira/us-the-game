@@ -41,18 +41,18 @@ public class CharacterSwap : MonoBehaviour {
         currNum = 1;
     }
 
-    void swapChuck() {
+    //void swapChuck() {
 
-    }
-    void swapNewt() {
+    //}
+    //void swapNewt() {
 
-    }
-    void swapPiper() {
+//    }
+  //  void swapPiper() {
 
-    }
-    void swapWesley() {
+    //}
+    //void swapWesley() {
 
-    }
+//    }
     // Update is called once per frame
     void Update () {
         GameObject[] characters;
