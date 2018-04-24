@@ -10,6 +10,8 @@ public class RadialMenu : MonoBehaviour {
     public RadialButton buttonPrefab;
     public RadialButton selected;
 
+	float offset = .5f;
+
 	// Use this for initialization
 	public void SpawnButtons(Interactable obj) {
         StartCoroutine(AnimateButtons(obj));
@@ -25,10 +27,8 @@ public class RadialMenu : MonoBehaviour {
         for (int i = 0; i < intMethods.Count; i++) {
             RadialButton newButton = Instantiate(buttonPrefab) as RadialButton;
             newButton.transform.SetParent(transform, false);
-            float theta = (2 * Mathf.PI / intMethods.Count) * i;
-            float xPos = Mathf.Sin(theta);
-            float yPos = Mathf.Cos(theta);
-            newButton.transform.localPosition = new Vector3(xPos, yPos, 0f) * 30f;
+			float yPos = - offset - 0.7f * i;
+			newButton.transform.localPosition = new Vector3(0f, yPos, 0f) * 30f;
             newButton.label.text = intMethods[i].Name.Split('_')[1];
             newButton.myMenu = this;
             newButton.method = intMethods[i];
