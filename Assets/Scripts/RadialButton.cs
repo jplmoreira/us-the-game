@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System.Reflection;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,10 +8,17 @@ using UnityEngine.EventSystems;
 public class RadialButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
 
     public Image circle;
-    public Image icon;
-    public string title;
+    public Text label;
+
+    [HideInInspector]
     public RadialMenu myMenu;
+    [HideInInspector]
     public float speed = 8f;
+    [HideInInspector]
+    public MethodInfo method;
+    [HideInInspector]
+    public Interactable receiver;
+
 
     Color defaultColor;
 

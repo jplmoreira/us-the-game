@@ -2,17 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Interactable : MonoBehaviour {
-
-    [System.Serializable]
-    public class Action {
-        public Color color;
-        public Sprite sprite;
-        public string title;
-    }
-
+public abstract class Interactable : MonoBehaviour {
     public string title;
-    public Action[] options;
 
 	// Use this for initialization
 	void Start () {
@@ -23,8 +14,11 @@ public class Interactable : MonoBehaviour {
 	
 	// Update is called once per frame
 	void OnMouseOver () {
-		if (Input.GetMouseButtonDown(1)) {
-            RadialMenuSpawner.ins.SpawnMenu(this);
+		if (Input.GetMouseButtonDown(0)) {
+            if (CharacterSwap.ins.currP.GetComponent<Interact>().Reachable(this.gameObject))
+                RadialMenuSpawner.ins.SpawnMenu(this);
+            else
+                Debug.Log("Out of reach!");
         }
 	}
 }

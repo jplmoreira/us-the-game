@@ -20,7 +20,7 @@ public class PointClick : MonoBehaviour {
         Vector2 pos = transform.position;
         float y = pos.y;
 
-        if (Input.GetKeyDown(KeyCode.Mouse0)) {
+        if (Input.GetKeyDown(KeyCode.Mouse1)) {
             move = true;
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 relativePos = new Vector2(mousePos.x, y);

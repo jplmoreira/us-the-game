@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestItem : MonoBehaviour, IIventoryItem {
+public class TestItem : Interactable, IIventoryItem {
 
 	public void OnPickup () {
 		gameObject.SetActive(false);
@@ -21,12 +21,7 @@ public class TestItem : MonoBehaviour, IIventoryItem {
 		}
 	}
 
-	void OnMouseOver() {
-		if (Input.GetMouseButtonDown (1)) {
-			if (CharacterSwap.ins.currP.GetComponent<Interact> ().Reachable (this.gameObject))
-				Inventory.ins.AddItem (this);
-			else
-				Debug.Log("Out of reach!");
-		}
-	}
+    public void Interact_PickUp() {
+        Inventory.ins.AddItem(this);
+    }
 }

@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   label: {fileID: 114031129677542450}
-  buttonPrefab: {fileID: 114528543269981510, guid: 576821fb7d56f244c8c792fd0b4a9e78,
+  buttonPrefab: {fileID: 114258987756150364, guid: 06f0a29947957f1469f9be775fa6fef8,
     type: 2}
   selected: {fileID: 0}
 --- !u!222 &222874453901292634
