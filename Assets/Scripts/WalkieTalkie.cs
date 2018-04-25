@@ -8,9 +8,4 @@ public class WalkieTalkie : MonoBehaviour {
         Time.timeScale = 1f - Time.timeScale;
         gameObject.SetActive(!gameObject.activeSelf);
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
