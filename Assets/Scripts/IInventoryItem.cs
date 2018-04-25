@@ -9,6 +9,8 @@ public interface IIventoryItem {
     Sprite Image { get; }
 
     void OnPickup();
+
+    void OnDrop();
 }
 
 public class InventoryEventArgs : EventArgs {

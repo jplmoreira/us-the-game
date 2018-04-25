@@ -8,6 +8,7 @@ public class InventoryUI : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Inventory.ins.ItemAdded += AddItemUI;
+        Inventory.ins.ItemRemoved += RemoveItemUI;
 		CharacterSwap.ins.CharSwap += ResetInvUI;
 	}
 
@@ -15,13 +16,29 @@ public class InventoryUI : MonoBehaviour {
 		Transform inventory = transform.Find ("Inventory");
 		foreach (Transform slot in inventory) {
 			Image image = slot.GetChild (0).GetChild (0).GetComponent<Image> ();
+            ItemDragHandler itemDragHandler = slot.GetChild(0).GetChild(0).GetComponent<ItemDragHandler>();
 			if (!image.enabled) {
 				image.enabled = true;
 				image.sprite = e.Item.Image;
+                itemDragHandler.Item = e.Item;
 				break;
 			}
 		}
 	}
+
+    private void RemoveItemUI(object sender, InventoryEventArgs e) {
+        Transform inventory = transform.Find("Inventory");
+        foreach (Transform slot in inventory) {
+            Image image = slot.GetChild(0).GetChild(0).GetComponent<Image>();
+            ItemDragHandler itemDragHandler = slot.GetChild(0).GetChild(0).GetComponent<ItemDragHandler>();
+            if (itemDragHandler.Item.Equals(e.Item)) {
+                image.enabled = false;
+                image.sprite = null;
+                itemDragHandler.Item = null;
+                break;
+            }
+        }
+    }
 
 	private void ResetInvUI(object sender, CharacterSwapArgs e) {
 		Transform inventory = transform.Find ("Inventory");

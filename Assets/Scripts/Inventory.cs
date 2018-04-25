@@ -8,6 +8,7 @@ public class Inventory : MonoBehaviour {
     private const int SLOTS = 9;
 	private List<IIventoryItem>[] mItems = new List<IIventoryItem>[4];
     public event EventHandler<InventoryEventArgs> ItemAdded;
+    public event EventHandler<InventoryEventArgs> ItemRemoved;
 	public static Inventory ins;
 	public int currP;
 
@@ -28,6 +29,20 @@ public class Inventory : MonoBehaviour {
 			if (ItemAdded != null) {
 				ItemAdded (this, new InventoryEventArgs (item));
 			}
+        }
+    }
+
+    public void RemoveItem(IIventoryItem item) {
+        if (mItems[currP].Contains(item)) {
+            mItems[currP].Remove(item);
+            item.OnDrop();
+
+            Collider collider = (item as MonoBehaviour).GetComponent<Collider>();
+            if (collider != null)
+                collider.enabled = true;
+
+            if (ItemRemoved != null)
+                ItemRemoved(this, new InventoryEventArgs(item));
         }
     }
 

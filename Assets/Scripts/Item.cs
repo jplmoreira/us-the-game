@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class Item : Interactable, IIventoryItem {
 
-	public void OnPickup () {
-		gameObject.SetActive(false);
-	}
-
 	public string _Name;
 	public string Name {
 		get {
@@ -22,7 +18,18 @@ public class Item : Interactable, IIventoryItem {
 		}
 	}
 
-	public void Interact_PickUp() {
+    public void OnPickup() {
+        gameObject.SetActive(false);
+    }
+
+    public void OnDrop() {
+        Transform character = CharacterSwap.ins.currP.transform;
+        gameObject.transform.position = character.transform.position;
+        gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
+        gameObject.SetActive(true);
+    }
+
+    public void Interact_PickUp() {
 		Inventory.ins.AddItem(this);
 	}
 
