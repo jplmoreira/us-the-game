@@ -12,9 +12,11 @@ public class MainMenu : MonoBehaviour {
         //SceneManager.GetActiveScene().buildIndex()+1
         SceneManager.LoadScene("Protoype");
     }
-    
-    public void OptionsMenu(){
+
+    public void QuitGame(){
         
+        Debug.Log("QUIT!");
+        Application.Quit();
     }
     
 }
