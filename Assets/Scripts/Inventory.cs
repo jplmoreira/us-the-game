@@ -9,8 +9,10 @@ public class Inventory : MonoBehaviour {
 	private List<IIventoryItem>[] mItems = new List<IIventoryItem>[4];
     public event EventHandler<InventoryEventArgs> ItemAdded;
     public event EventHandler<InventoryEventArgs> ItemRemoved;
-	public static Inventory ins;
-	public int currP;
+    public event EventHandler<InventoryEventArgs> ItemUsed;
+    public static Inventory ins;
+
+    public int currP;
 
 	void Awake() {
 		ins = this;
@@ -46,7 +48,13 @@ public class Inventory : MonoBehaviour {
         }
     }
 
-	private void SwapEvent(object sender, CharacterSwapArgs e) {
+    internal void UseItem(IIventoryItem item) {
+
+        if (ItemUsed != null)
+            ItemUsed(this, new InventoryEventArgs(item));
+    }
+
+    private void SwapEvent(object sender, CharacterSwapArgs e) {
 		StartCoroutine (UpdateInventory (e.Num));
 	}
 

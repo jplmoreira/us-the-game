@@ -11,6 +11,8 @@ public interface IIventoryItem {
     void OnPickup();
 
     void OnDrop();
+
+    void OnUse();
 }
 
 public class InventoryEventArgs : EventArgs {

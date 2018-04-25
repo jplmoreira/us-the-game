@@ -30,19 +30,9 @@ public class Item : Interactable, IIventoryItem {
         gameObject.SetActive(true);
     }
 
+    public virtual void OnUse() {}
+
     public void Interact_PickUp() {
 		Inventory.ins.AddItem(this);
-	}
-
-	public void Interact_Test1() {
-		Debug.Log ("Test1");
-	}
-
-	public void Interact_Test2() {
-		Debug.Log ("Test2");
-	}
-
-	public void Interact_Test3() {
-		Debug.Log ("Test3");
 	}
 }
