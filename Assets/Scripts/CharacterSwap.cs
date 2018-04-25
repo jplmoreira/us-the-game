@@ -45,6 +45,7 @@ public class CharacterSwap : MonoBehaviour {
     }
 
     public void swapChuck() {
+        var swapScreen = GameObject.Find("CharacterSwap");
         characters = GameObject.FindGameObjectsWithTag("Character");
         if (characters.Length != 1) {
             Debug.LogError("More than one character Active!");
@@ -60,8 +61,10 @@ public class CharacterSwap : MonoBehaviour {
         if (CharSwap != null) {
             CharSwap(this, new CharacterSwapArgs(currNum));
         }
+        swapScreen.GetComponent<WalkieTalkie>().charSwap();
     }
     public void swapNewt() {
+        var swapScreen = GameObject.Find("CharacterSwap");
         characters = GameObject.FindGameObjectsWithTag("Character");
         if (characters.Length != 1) {
             Debug.LogError("More than one character Active!");
@@ -77,8 +80,10 @@ public class CharacterSwap : MonoBehaviour {
         if (CharSwap != null) {
             CharSwap(this, new CharacterSwapArgs(currNum));
         }
+        swapScreen.GetComponent<WalkieTalkie>().charSwap();
     }
     public void swapPiper() {
+        var swapScreen = GameObject.Find("CharacterSwap");
         characters = GameObject.FindGameObjectsWithTag("Character");
         if (characters.Length != 1) {
             Debug.LogError("More than one character Active!");
@@ -94,8 +99,10 @@ public class CharacterSwap : MonoBehaviour {
         if (CharSwap != null) {
             CharSwap(this, new CharacterSwapArgs(currNum));
         }
+        swapScreen.GetComponent<WalkieTalkie>().charSwap();
     }
     public void swapWesley() {
+        var swapScreen = GameObject.Find("CharacterSwap");
         characters = GameObject.FindGameObjectsWithTag("Character");
         if (characters.Length != 1) {
             Debug.LogError("More than one character Active!");
@@ -111,6 +118,7 @@ public class CharacterSwap : MonoBehaviour {
         if (CharSwap != null) {
             CharSwap(this, new CharacterSwapArgs(currNum));
         }
+        swapScreen.GetComponent<WalkieTalkie>().charSwap();
     }
 
     void SavePosition(GameObject character) {
