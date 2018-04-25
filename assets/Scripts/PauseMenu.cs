@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 //TUTORIAL - https://www.youtube.com/watch?v=JivuXdrIHK0
@@ -56,11 +57,17 @@ public class PauseMenu : MonoBehaviour {
         
         Debug.Log("homeMenu");
         
+        Time.timeScale = 1f;
+
+        SceneManager.LoadScene("Home Menu");
+        
     }
     
     public void QuitGame(){
         
         Debug.Log("quitgame");
+        
+        Application.Quit();
         
     }
 }
