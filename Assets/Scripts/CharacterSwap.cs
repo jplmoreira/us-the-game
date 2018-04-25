@@ -61,8 +61,7 @@ public class CharacterSwap : MonoBehaviour {
         if (CharSwap != null) {
             CharSwap(this, new CharacterSwapArgs(currNum));
         }
-        Time.timeScale = 1f - Time.timeScale;
-        swapScreen.SetActive(!swapScreen.activeSelf);
+        swapScreen.GetComponent<WalkieTalkie>().charSwap();
     }
     public void swapNewt() {
         var swapScreen = GameObject.Find("CharacterSwap");
@@ -81,8 +80,7 @@ public class CharacterSwap : MonoBehaviour {
         if (CharSwap != null) {
             CharSwap(this, new CharacterSwapArgs(currNum));
         }
-        Time.timeScale = 1f - Time.timeScale;
-        swapScreen.SetActive(!swapScreen.activeSelf);
+        swapScreen.GetComponent<WalkieTalkie>().charSwap();
     }
     public void swapPiper() {
         var swapScreen = GameObject.Find("CharacterSwap");
@@ -101,8 +99,7 @@ public class CharacterSwap : MonoBehaviour {
         if (CharSwap != null) {
             CharSwap(this, new CharacterSwapArgs(currNum));
         }
-        Time.timeScale = 1f - Time.timeScale;
-        swapScreen.SetActive(!swapScreen.activeSelf);
+        swapScreen.GetComponent<WalkieTalkie>().charSwap();
     }
     public void swapWesley() {
         var swapScreen = GameObject.Find("CharacterSwap");
@@ -121,8 +118,7 @@ public class CharacterSwap : MonoBehaviour {
         if (CharSwap != null) {
             CharSwap(this, new CharacterSwapArgs(currNum));
         }
-        Time.timeScale = 1f - Time.timeScale;
-        swapScreen.SetActive(!swapScreen.activeSelf);
+        swapScreen.GetComponent<WalkieTalkie>().charSwap();
     }
 
     void SavePosition(GameObject character) {
