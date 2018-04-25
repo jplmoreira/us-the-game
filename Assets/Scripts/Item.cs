@@ -26,6 +26,7 @@ public class Item : Interactable, IIventoryItem {
         Transform character = CharacterSwap.ins.currP.transform;
         gameObject.transform.position = character.transform.position;
         gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
+        gameObject.GetComponent<SpriteRenderer>().sortingOrder += 2;
         gameObject.SetActive(true);
     }
 
