@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 //https://www.youtube.com/watch?v=zc8ac_qUXQY     TUTORIAL
 
 public class MainMenu : MonoBehaviour {
+    
 
 	public void PlayGame(){
         //SceneManager.GetActiveScene().buildIndex()+1
