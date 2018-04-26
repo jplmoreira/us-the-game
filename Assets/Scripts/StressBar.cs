@@ -19,6 +19,7 @@ public class StressBar : MonoBehaviour {
             checkpoint = 25;
         } else if (currValue >= 50 && currValue < 75) {
             //barAudio.Play();
+            //trocar sprites para scared (animations & idle) mais tarde?
             checkpoint = 50;
         } else if (currValue >= 75 && currValue < 100) {
             //scaryHands.SetActive(true);
