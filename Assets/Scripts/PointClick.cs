@@ -9,10 +9,13 @@ public class PointClick : MonoBehaviour {
     private Vector2 targetPosition;
     private bool move = false;
     Animator animator;
+    public GameObject audioManager;
     
     // Initializing animation
     void Start() {
         animator = GetComponent<Animator>();
+        //am = GameObject.Find("AudioManager");
+        //am.Play("LevelBackgroundMusic");
     }
 
     // Update is called once per frame
