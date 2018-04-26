@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Character
   - Item
+  - Hand
   layers:
   - Default
   - TransparentFX

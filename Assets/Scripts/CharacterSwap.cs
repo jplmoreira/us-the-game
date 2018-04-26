@@ -27,6 +27,8 @@ public class CharacterSwap : MonoBehaviour {
 	public event EventHandler<CharacterSwapArgs> CharSwap;
 	[HideInInspector]
 	public static CharacterSwap ins;
+    [HideInInspector]
+    public IIventoryItem currItem;
 
     private void Awake() {
 		ins = this;
@@ -42,6 +44,10 @@ public class CharacterSwap : MonoBehaviour {
         pos3 = currChar.transform.position;
         pos4 = currChar.transform.position;
         currNum = 1;
+    }
+
+    private void Start() {
+        Inventory.ins.ItemSelected += SelectItem;
     }
 
     public void swapChuck() {
@@ -133,6 +139,30 @@ public class CharacterSwap : MonoBehaviour {
             pos4 = character.transform.position;
         } else {
             Debug.LogError("Different name than expected: " + name);
+        }
+    }
+
+    void SelectItem(object sender, InventoryEventArgs e) {
+        IIventoryItem item = e.Item;
+        GameObject hand = GameObject.FindWithTag("Hand");
+        if (hand != null) {
+            DeselectItem(item);
+            if (item.Equals(currItem))
+                return;
+            GameObject goItem = (item as MonoBehaviour).gameObject;
+            goItem.transform.parent = hand.transform;
+            goItem.transform.position = hand.transform.position;
+            goItem.SetActive(true);
+            currItem = item;
+        }
+    }
+
+    public void DeselectItem(IIventoryItem item) {
+        if (item.Equals(currItem)) {
+            GameObject goItem = (currItem as MonoBehaviour).gameObject;
+            goItem.transform.parent = null;
+            goItem.SetActive(false);
+            currItem = null;
         }
     }
 }

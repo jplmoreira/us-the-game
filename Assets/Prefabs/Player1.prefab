@@ -23,12 +23,26 @@ GameObject:
   - component: {fileID: 61357464606522328}
   - component: {fileID: 50146756179726328}
   - component: {fileID: 114182841284836688}
-  - component: {fileID: 114085253760595974}
   - component: {fileID: 95520767933650378}
   - component: {fileID: 114639511781923742}
   m_Layer: 10
   m_Name: Player1
   m_TagString: Character
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1228371303682716
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4568948327587222}
+  m_Layer: 10
+  m_Name: Hand
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40,10 +54,24 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1181266101678446}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.922, y: -3.3286955, z: 0}
+  m_LocalPosition: {x: -55.18, y: -23.14, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4568948327587222}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4568948327587222
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1228371303682716}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.167, y: -0.518, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 4245897780309592}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &50146756179726328
@@ -100,7 +128,7 @@ Animator:
   m_GameObject: {fileID: 1181266101678446}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2aceb17352f0746808dcae080e174356, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -108,34 +136,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114085253760595974
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1181266101678446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87a339c354414a941bd6768070bfd26a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  title: Wesley
-  options:
-  - color: {r: 0.3158521, g: 0.3158521, b: 0.9338235, a: 1}
-    sprite: {fileID: 21300000, guid: dd3c11706206c064f8b1c38e976a3bc9, type: 3}
-    title: Pick up
-  - color: {r: 0.2729715, g: 0.875, b: 0.19301468, a: 1}
-    sprite: {fileID: 21300000, guid: 6190ba2ff7304db4cbb3cff97ec57206, type: 3}
-    title: Climb
-  - color: {r: 0.9117647, g: 0.870615, b: 0.31509513, a: 1}
-    sprite: {fileID: 21300000, guid: 92cd7392e3a48134a89a2d33fb37fc60, type: 3}
-    title: Push
-  - color: {r: 0.9705882, g: 0.44247407, b: 0.44247407, a: 1}
-    sprite: {fileID: 21300000, guid: c07b34dd63a037041be51d324a605dd9, type: 3}
-    title: Unlock
-  - color: {r: 1, g: 0.30882353, b: 0.9237322, a: 1}
-    sprite: {fileID: 21300000, guid: 721b63f576d15a74987c7d325bb92166, type: 3}
-    title: Open
 --- !u!114 &114182841284836688
 MonoBehaviour:
   m_ObjectHideFlags: 1

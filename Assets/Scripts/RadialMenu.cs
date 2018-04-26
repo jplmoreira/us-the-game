@@ -41,7 +41,6 @@ public class RadialMenu : MonoBehaviour {
     private void Update() {
         if (Input.GetMouseButtonUp(0)) {
             if (selected) {
-                Debug.Log(selected.label.text + " was selected");
                 selected.method.Invoke(selected.receiver, null);
             }
             Destroy(gameObject);

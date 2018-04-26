@@ -9,7 +9,7 @@ public class Inventory : MonoBehaviour {
 	private List<IIventoryItem>[] mItems = new List<IIventoryItem>[4];
     public event EventHandler<InventoryEventArgs> ItemAdded;
     public event EventHandler<InventoryEventArgs> ItemRemoved;
-    public event EventHandler<InventoryEventArgs> ItemUsed;
+    public event EventHandler<InventoryEventArgs> ItemSelected;
     public static Inventory ins;
 
     public int currP;
@@ -21,8 +21,11 @@ public class Inventory : MonoBehaviour {
 		mItems [2] = new List<IIventoryItem> ();
 		mItems [3] = new List<IIventoryItem> ();
 		currP = 0;
-		CharacterSwap.ins.CharSwap += SwapEvent;
 	}
+
+    private void Start() {
+        CharacterSwap.ins.CharSwap += SwapEvent;
+    }
 
     public void AddItem(IIventoryItem item) {
 		if  (mItems[currP].Count < SLOTS) {
@@ -37,6 +40,7 @@ public class Inventory : MonoBehaviour {
     public void RemoveItem(IIventoryItem item) {
         if (mItems[currP].Contains(item)) {
             mItems[currP].Remove(item);
+            CharacterSwap.ins.DeselectItem(item);
             item.OnDrop();
 
             Collider collider = (item as MonoBehaviour).GetComponent<Collider>();
@@ -48,10 +52,10 @@ public class Inventory : MonoBehaviour {
         }
     }
 
-    internal void UseItem(IIventoryItem item) {
+    internal void SelectItem(IIventoryItem item) {
 
-        if (ItemUsed != null)
-            ItemUsed(this, new InventoryEventArgs(item));
+        if (ItemSelected != null)
+            ItemSelected(this, new InventoryEventArgs(item));
     }
 
     private void SwapEvent(object sender, CharacterSwapArgs e) {
