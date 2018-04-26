@@ -7,6 +7,7 @@ public class CharacterSwap : MonoBehaviour {
 
     GameObject[] characters;
     GameObject currChar;
+    GameObject swapScreen;
 
     public Transform player1;
     private Vector3 pos1;
@@ -51,7 +52,7 @@ public class CharacterSwap : MonoBehaviour {
     }
 
     public void swapChuck() {
-        var swapScreen = GameObject.Find("CharacterSwap");
+        swapScreen = GameObject.Find("CharacterSwap");
         characters = GameObject.FindGameObjectsWithTag("Character");
         if (characters.Length != 1) {
             Debug.LogError("More than one character Active!");
@@ -70,7 +71,7 @@ public class CharacterSwap : MonoBehaviour {
         swapScreen.GetComponent<WalkieTalkie>().charSwap();
     }
     public void swapNewt() {
-        var swapScreen = GameObject.Find("CharacterSwap");
+        swapScreen = GameObject.Find("CharacterSwap");
         characters = GameObject.FindGameObjectsWithTag("Character");
         if (characters.Length != 1) {
             Debug.LogError("More than one character Active!");
@@ -89,7 +90,7 @@ public class CharacterSwap : MonoBehaviour {
         swapScreen.GetComponent<WalkieTalkie>().charSwap();
     }
     public void swapPiper() {
-        var swapScreen = GameObject.Find("CharacterSwap");
+        swapScreen = GameObject.Find("CharacterSwap");
         characters = GameObject.FindGameObjectsWithTag("Character");
         if (characters.Length != 1) {
             Debug.LogError("More than one character Active!");
@@ -108,7 +109,7 @@ public class CharacterSwap : MonoBehaviour {
         swapScreen.GetComponent<WalkieTalkie>().charSwap();
     }
     public void swapWesley() {
-        var swapScreen = GameObject.Find("CharacterSwap");
+        swapScreen = GameObject.Find("CharacterSwap");
         characters = GameObject.FindGameObjectsWithTag("Character");
         if (characters.Length != 1) {
             Debug.LogError("More than one character Active!");
