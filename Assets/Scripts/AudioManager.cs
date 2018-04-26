@@ -71,7 +71,7 @@ public class AudioManager : MonoBehaviour {
         
         foreach(Sound s in sounds){
             
-            s.volume = value;
+            s.source.volume = value;
         }
     }
     
@@ -79,7 +79,7 @@ public class AudioManager : MonoBehaviour {
         
         foreach(Sound s in musics){
             
-            s.volume = value;
+            s.source.volume = value;
         }
     }
     
