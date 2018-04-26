@@ -30,6 +30,7 @@ public class InventoryUI : MonoBehaviour {
         Transform inventory = transform.Find("Inventory");
         foreach (Transform slot in inventory) {
             Image image = slot.GetChild(0).GetChild(0).GetComponent<Image>();
+            slot.GetChild(0).GetComponent<ItemClickHandler>().picked = false;
             ItemDragHandler itemDragHandler = slot.GetChild(0).GetChild(0).GetComponent<ItemDragHandler>();
             if (itemDragHandler.Item.Equals(e.Item)) {
                 image.enabled = false;
@@ -44,7 +45,8 @@ public class InventoryUI : MonoBehaviour {
 		Transform inventory = transform.Find ("Inventory");
 		foreach (Transform slot in inventory) {
 			Image image = slot.GetChild (0).GetChild (0).GetComponent<Image> ();
-			if (image.enabled) {
+            slot.GetChild(0).GetComponent<ItemClickHandler>().picked = false;
+            if (image.enabled) {
 				image.enabled = false;
 				image.sprite = null;
 			}

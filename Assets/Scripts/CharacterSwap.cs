@@ -52,6 +52,7 @@ public class CharacterSwap : MonoBehaviour {
     }
 
     public void swapChuck() {
+        DeselectItem(currItem);
         swapScreen = GameObject.Find("CharacterSwap");
         characters = GameObject.FindGameObjectsWithTag("Character");
         if (characters.Length != 1) {
@@ -71,6 +72,7 @@ public class CharacterSwap : MonoBehaviour {
         swapScreen.GetComponent<WalkieTalkie>().charSwap();
     }
     public void swapNewt() {
+        DeselectItem(currItem);
         swapScreen = GameObject.Find("CharacterSwap");
         characters = GameObject.FindGameObjectsWithTag("Character");
         if (characters.Length != 1) {
@@ -90,6 +92,7 @@ public class CharacterSwap : MonoBehaviour {
         swapScreen.GetComponent<WalkieTalkie>().charSwap();
     }
     public void swapPiper() {
+        DeselectItem(currItem);
         swapScreen = GameObject.Find("CharacterSwap");
         characters = GameObject.FindGameObjectsWithTag("Character");
         if (characters.Length != 1) {
@@ -109,6 +112,7 @@ public class CharacterSwap : MonoBehaviour {
         swapScreen.GetComponent<WalkieTalkie>().charSwap();
     }
     public void swapWesley() {
+        DeselectItem(currItem);
         swapScreen = GameObject.Find("CharacterSwap");
         characters = GameObject.FindGameObjectsWithTag("Character");
         if (characters.Length != 1) {
@@ -159,7 +163,7 @@ public class CharacterSwap : MonoBehaviour {
     }
 
     public void DeselectItem(IIventoryItem item) {
-        if (item.Equals(currItem)) {
+        if (item != null && item.Equals(currItem)) {
             GameObject goItem = (currItem as MonoBehaviour).gameObject;
             goItem.transform.parent = null;
             goItem.SetActive(false);

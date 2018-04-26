@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ItemClickHandler : MonoBehaviour {
 
-    bool picked = false;
+    [HideInInspector]
+    public bool picked = false;
 
     public void OnItemClicked() {
         ItemDragHandler dragHandler = transform.GetChild(0).GetComponent<ItemDragHandler>();
