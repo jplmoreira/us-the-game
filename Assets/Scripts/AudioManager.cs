@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.Audio;
-
+using UnityEngine.SceneManagement;
 
 
 
@@ -17,19 +17,72 @@ public class AudioManager : MonoBehaviour {
     
     public Sound[] musics;
     
+    public string currentScene;
+    
+    
+    public void Play (string name) {
+		
+        Debug.Log("entrei no play " + name);
+        
+        Sound s;
+        
+        if(Array.Find(sounds, sound => sound.name == name) != null){
+            
+            s = Array.Find(sounds, sound => sound.name == name);
+
+        }else if (Array.Find(musics, sound => sound.name == name) != null){
+    
+            s = Array.Find(musics, sound => sound.name == name);
+        
+        }else{
+            return;
+        }
+           
+            
+        s.source.Play();
+	}
+    
+    
+    public void Stop (string name) {
+		
+        Debug.Log("entrei no stop " + name);
+        
+        Sound s;
+        
+        if(Array.Find(sounds, sound => sound.name == name) != null){
+            
+            s = Array.Find(sounds, sound => sound.name == name);
+
+        }else if (Array.Find(musics, sound => sound.name == name) != null){
+    
+            s = Array.Find(musics, sound => sound.name == name);
+        
+        }else{
+            return;
+        }
+           
+            
+        s.source.Stop();
+	}
     
       
 	// Use this for initialization
 	void Awake () {
         
-        if(instance == null){
-            instance = this;
-        }else{
-            Destroy(gameObject);
-            return;
-        }
+        currentScene = SceneManager.GetActiveScene().name;
         
-        DontDestroyOnLoad(gameObject);
+        Debug.Log("entrei no awake em "+ currentScene);
+        
+//        if(instance == null){
+//            instance = this;
+//        }else{
+//            Destroy(gameObject);
+//            Play("LevelBackgroundMusic");
+//            Stop("BackgroundMusic");
+//            return;
+//        }
+//        
+//        DontDestroyOnLoad(gameObject);
 		        
         foreach(Sound s in sounds){
             
@@ -50,28 +103,22 @@ public class AudioManager : MonoBehaviour {
             m.source.loop = m.loop;
 
         }
+        
+        if(String.Compare(currentScene, "Home Menu") == 0){
+            Debug.Log("play o menu!!!");
+            
+            Play("BackgroundMusic");
+            Stop("LevelBackgroundMusic");
+
+        }else if(String.Compare(currentScene, "Protoype") == 0){
+            Debug.Log("play o level!!!");
+            
+            Play("LevelBackgroundMusic");
+            Stop("BackgroundMusic");
+        }
+    
 	}
 	
-	public void Play (string name) {
-		
-        
-        Sound s;
-        
-        if(Array.Find(sounds, sound => sound.name == name) != null){
-            
-            s = Array.Find(sounds, sound => sound.name == name);
-
-        }else if (Array.Find(musics, sound => sound.name == name) != null){
-    
-            s = Array.Find(musics, sound => sound.name == name);
-        
-        }else{
-            return;
-        }
-           
-            
-        s.source.Play();
-	}
     
     
     public void VolumeSounds (float value){
@@ -94,6 +141,18 @@ public class AudioManager : MonoBehaviour {
         
     void Start(){
                 
-        Play("BackgroundMusic");
+        Debug.Log("entrei no start em "+ currentScene);
+        
+        if(String.Compare(currentScene, "Home Menu") == 0){
+            
+            Debug.Log("play o menu!!!");
+            Play("BackgroundMusic");
+            Stop("LevelBackgroundMusic");
+        }else if(String.Compare(currentScene, "Protoype") == 0){
+            
+            Debug.Log("play o level!!!");
+            Play("LevelBackgroundMusic");
+            Stop("BackgroundMusic");
+        }
     }
 }
