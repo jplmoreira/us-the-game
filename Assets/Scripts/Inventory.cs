@@ -7,9 +7,12 @@ public class Inventory : MonoBehaviour {
 
     private const int SLOTS = 9;
 	private List<IIventoryItem>[] mItems = new List<IIventoryItem>[4];
+	private List<IIventoryItem> craftTable = new List<IIventoryItem> ();
     public event EventHandler<InventoryEventArgs> ItemAdded;
     public event EventHandler<InventoryEventArgs> ItemRemoved;
     public event EventHandler<InventoryEventArgs> ItemSelected;
+	public event EventHandler<InventoryEventArgs> CraftAdded;
+	public event EventHandler<InventoryEventArgs> CraftRemoved;
     public static Inventory ins;
 
     public int currP;
@@ -42,7 +45,6 @@ public class Inventory : MonoBehaviour {
             mItems[currP].Remove(item);
             CharacterSwap.ins.DeselectItem(item);
             item.OnDrop();
-
             Collider collider = (item as MonoBehaviour).GetComponent<Collider>();
             if (collider != null)
                 collider.enabled = true;
@@ -51,6 +53,36 @@ public class Inventory : MonoBehaviour {
                 ItemRemoved(this, new InventoryEventArgs(item));
         }
     }
+
+	public void AddCraft(IIventoryItem item) {
+		if (!craftTable.Contains(item)) {
+			craftTable.Add (item);
+			if (CraftAdded != null)
+				CraftAdded (this, new InventoryEventArgs (item));
+		}
+	}
+
+	public void RemoveCraft(IIventoryItem item) {
+		if (craftTable.Contains (item)) {
+			craftTable.Remove (item);
+			if (CraftRemoved != null)
+				CraftRemoved (this, new InventoryEventArgs (item));
+		}
+	}
+
+	public void ClearCraft() {
+		Debug.Log ("Clearing crafting table");
+		for (int i = craftTable.Count - 1; i <= 1; i--) {
+			IIventoryItem item = craftTable [i];
+			craftTable.RemoveAt(i);
+			if (CraftRemoved != null)
+				CraftRemoved (this, new InventoryEventArgs (item));
+		}
+	}
+
+	public void CombineCraft() {
+		ClearCraft ();
+	}
 
     internal void SelectItem(IIventoryItem item) {
 

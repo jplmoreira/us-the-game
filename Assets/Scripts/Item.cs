@@ -20,7 +20,8 @@ public class Item : Interactable, IIventoryItem {
 
     public void OnPickup() {
         GetComponent<Rigidbody2D>().gravityScale = 0;
-        gameObject.GetComponent<SpriteRenderer>().sortingOrder -= 2;
+		if (gameObject.GetComponent<SpriteRenderer>().sortingOrder > 1)
+        	gameObject.GetComponent<SpriteRenderer>().sortingOrder -= 2;
         gameObject.SetActive(false);
     }
 
