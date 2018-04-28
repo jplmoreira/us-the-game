@@ -10,7 +10,7 @@ public class CraftDropHandler : MonoBehaviour, IDropHandler {
 
 		if (RectTransformUtility.RectangleContainsScreenPoint(craftTab, Input.mousePosition)) {
 			IIventoryItem item = eventData.pointerDrag.gameObject.GetComponent<ItemDragHandler>().Item;
-			if (item != null)
+			if (item != null && !item.Name.Equals("Craft Tool"))
 				Inventory.ins.AddCraft(item);
 		}
 	}

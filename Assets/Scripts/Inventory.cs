@@ -16,11 +16,15 @@ public class Inventory : MonoBehaviour {
     public static Inventory ins;
 
     public int currP;
+	public GameObject craftingTool;
 
 	void Awake() {
 		ins = this;
 		mItems [0] = new List<IIventoryItem> ();
 		mItems [1] = new List<IIventoryItem> ();
+		GameObject go = Instantiate (craftingTool);
+		mItems [1].Add (go.GetComponent<CraftTool>());
+		go.SetActive (false);
 		mItems [2] = new List<IIventoryItem> ();
 		mItems [3] = new List<IIventoryItem> ();
 		currP = 0;
@@ -72,9 +76,9 @@ public class Inventory : MonoBehaviour {
 
 	public void ClearCraft() {
 		Debug.Log ("Clearing crafting table");
-		for (int i = craftTable.Count - 1; i <= 1; i--) {
-			IIventoryItem item = craftTable [i];
-			craftTable.RemoveAt(i);
+		while(craftTable.Count > 0) {			
+			IIventoryItem item = craftTable [0];
+			craftTable.RemoveAt(0);
 			if (CraftRemoved != null)
 				CraftRemoved (this, new InventoryEventArgs (item));
 		}
