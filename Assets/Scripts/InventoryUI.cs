@@ -32,7 +32,7 @@ public class InventoryUI : MonoBehaviour {
             Image image = slot.GetChild(0).GetChild(0).GetComponent<Image>();
             slot.GetChild(0).GetComponent<ItemClickHandler>().picked = false;
             ItemDragHandler itemDragHandler = slot.GetChild(0).GetChild(0).GetComponent<ItemDragHandler>();
-            if (itemDragHandler.Item.Equals(e.Item)) {
+            if (e.Item.Equals(itemDragHandler.Item)) {
                 image.enabled = false;
                 image.sprite = null;
                 itemDragHandler.Item = null;

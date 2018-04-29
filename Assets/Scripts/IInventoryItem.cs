@@ -8,6 +8,8 @@ public interface IIventoryItem {
     string Name { get; }
     Sprite Image { get; }
 
+    GameObject GetObject();
+
     void OnPickup();
 
     void OnDrop();

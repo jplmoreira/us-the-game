@@ -69,24 +69,42 @@ public class Inventory : MonoBehaviour {
 	public void RemoveCraft(IIventoryItem item) {
 		if (craftTable.Contains (item)) {
 			craftTable.Remove (item);
-			if (CraftRemoved != null)
+            if (CraftRemoved != null)
 				CraftRemoved (this, new InventoryEventArgs (item));
 		}
 	}
 
 	public void ClearCraft() {
-		Debug.Log ("Clearing crafting table");
-		while(craftTable.Count > 0) {			
-			IIventoryItem item = craftTable [0];
-			craftTable.RemoveAt(0);
+		for (int i = craftTable.Count - 1; i >= 0; i--) {			
+			IIventoryItem item = craftTable [i];
+
 			if (CraftRemoved != null)
 				CraftRemoved (this, new InventoryEventArgs (item));
-		}
+            craftTable.RemoveAt(i);
+        }
 	}
 
 	public void CombineCraft() {
-		ClearCraft ();
-	}
+        if (craftTable.Count > 0) {
+            string[] ingredients = new string[craftTable.Count];
+            IIventoryItem[] items = new IIventoryItem[craftTable.Count];
+            for (int i = 0; i < craftTable.Count; i++) {
+                ingredients[i] = craftTable[i].Name;
+                items[i] = craftTable[i];
+            }
+            GameObject result = CraftingDatabase.ins.Craft(ingredients);
+            if (result != null) {
+                ClearCraft();
+                foreach (IIventoryItem item in items) {
+                    if (ItemRemoved != null)
+                        ItemRemoved(this, new InventoryEventArgs(item));
+                    mItems[currP].Remove(item);
+                    Destroy(item.GetObject(), 1f);
+                }
+                AddItem(result.GetComponent<IIventoryItem>());
+            }
+        }
+    }
 
     internal void SelectItem(IIventoryItem item) {
 
@@ -106,4 +124,12 @@ public class Inventory : MonoBehaviour {
 				ItemAdded (this, new InventoryEventArgs (item));
 		}
 	}
+
+    IIventoryItem GetItem(string item) {
+        foreach (IIventoryItem invItem in mItems[currP]) {
+            if (invItem.Name.Equals(item))
+                return invItem;
+        }
+        return null;
+    }
 }
