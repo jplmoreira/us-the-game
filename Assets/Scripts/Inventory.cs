@@ -101,7 +101,11 @@ public class Inventory : MonoBehaviour {
                     mItems[currP].Remove(item);
                     Destroy(item.GetObject(), 1f);
                 }
-                AddItem(result.GetComponent<IIventoryItem>());
+                GameObject realItem = Instantiate(result);
+                AddItem(realItem.GetComponent<IIventoryItem>());
+                CharacterSwap.ins.DeselectItem(CharacterSwap.ins.currItem);
+                GameObject craftingTable = GameObject.Find("HUD").transform.Find("CraftingTable").gameObject;
+                craftingTable.SetActive(false);
             }
         }
     }
