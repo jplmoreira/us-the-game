@@ -4221,6 +4221,7 @@ MonoBehaviour:
   currP: 0
   craftingTool: {fileID: 1991227301401730, guid: 7f5a7aa1efab446f38a5eefa86a4a164,
     type: 2}
+  slingShot: {fileID: 1552212118371698, guid: 250aaaa100df35a4c9a19bedd83cbc32, type: 2}
 --- !u!114 &1593008301
 MonoBehaviour:
   m_ObjectHideFlags: 0
