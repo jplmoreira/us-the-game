@@ -35,6 +35,10 @@ public class Item : Interactable, IIventoryItem {
 
     public virtual void OnUse() {}
 
+    public GameObject GetObject() {
+        return gameObject;
+    }
+
     public void Interact_PickUp() {
 		Inventory.ins.AddItem(this);
 	}
