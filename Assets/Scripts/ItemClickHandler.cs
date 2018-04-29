@@ -18,7 +18,6 @@ public class ItemClickHandler : MonoBehaviour {
                 picked = true;
             } else {
                 CharacterSwap.ins.DeselectItem(item);
-				item.OnUse ();
                 picked = false;
             }   
         }

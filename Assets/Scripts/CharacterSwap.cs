@@ -164,6 +164,7 @@ public class CharacterSwap : MonoBehaviour {
 
     public void DeselectItem(IIventoryItem item) {
         if (item != null && item.Equals(currItem)) {
+            currItem.OnUse();
             GameObject goItem = (currItem as MonoBehaviour).gameObject;
             goItem.transform.parent = null;
             goItem.SetActive(false);

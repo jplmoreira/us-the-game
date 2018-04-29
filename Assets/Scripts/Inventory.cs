@@ -17,6 +17,7 @@ public class Inventory : MonoBehaviour {
 
     public int currP;
 	public GameObject craftingTool;
+    public GameObject slingShot;
 
 	void Awake() {
 		ins = this;
@@ -26,7 +27,10 @@ public class Inventory : MonoBehaviour {
 		mItems [1].Add (go.GetComponent<CraftTool>());
 		go.SetActive (false);
 		mItems [2] = new List<IIventoryItem> ();
-		mItems [3] = new List<IIventoryItem> ();
+        go = Instantiate(slingShot);
+        mItems[2].Add(go.GetComponent<Slingshot>());
+        go.SetActive(false);
+        mItems [3] = new List<IIventoryItem> ();
 		currP = 0;
 	}
 
