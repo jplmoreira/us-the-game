@@ -7,6 +7,7 @@ TagManager:
   - Character
   - Item
   - Hand
+  - Stone
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - Obstacle
   - Item
   - Character
-  - 
+  - Stone
   - 
   - 
   - 
