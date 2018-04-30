@@ -40,8 +40,8 @@ public class StressBar : MonoBehaviour {
                 if (currentStress < 0) {
                     currentStress = 0;
                     stressBar.sizeDelta = new Vector2(currentStress, stressBar.sizeDelta.y);
-                    break;
                 }
+                break;
             case 25:
                 if (currentStress < 25) {
                     currentStress = 25;
