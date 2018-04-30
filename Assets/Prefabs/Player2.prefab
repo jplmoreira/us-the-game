@@ -151,6 +151,8 @@ MonoBehaviour:
   obstacles:
     serializedVersion: 2
     m_Bits: 256
+  audioManager: {fileID: 0}
+  interacting: 0
 --- !u!114 &114579838013191676
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -162,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa86796dae6e468face37fe1db67fad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reach: 1.5
+  reach: 1
   mask:
     serializedVersion: 2
     m_Bits: 768
