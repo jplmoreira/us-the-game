@@ -93,20 +93,6 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: porta com corda para a conduta_0
-      rect:
-        serializedVersion: 2
-        x: 41
-        y: 3155
-        width: 4
-        height: 4
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
       name: porta com corda para a conduta_1
       rect:
         serializedVersion: 2
@@ -121,24 +107,10 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: porta com corda para a conduta_2
-      rect:
-        serializedVersion: 2
-        x: 665
-        y: 3154
-        width: 4
-        height: 4
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
       name: porta com corda para a conduta_3
       rect:
         serializedVersion: 2
-        x: 670
+        x: 671
         y: 3117
         width: 555
         height: 143
@@ -149,43 +121,15 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: porta com corda para a conduta_4
-      rect:
-        serializedVersion: 2
-        x: 1289
-        y: 3154
-        width: 4
-        height: 4
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
       name: porta com corda para a conduta_5
       rect:
         serializedVersion: 2
-        x: 1303
+        x: 1294
         y: 2996
-        width: 555
+        width: 554
         height: 259
       alignment: 2
       pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: porta com corda para a conduta_6
-      rect:
-        serializedVersion: 2
-        x: 41
-        y: 2059
-        width: 4
-        height: 4
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -212,22 +156,8 @@ TextureImporter:
         y: 1579
         width: 578
         height: 585
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: porta com corda para a conduta_9
-      rect:
-        serializedVersion: 2
-        x: 1289
-        y: 2058
-        width: 4
-        height: 4
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.52, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -237,9 +167,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1294
-        y: 1521
+        y: 1525
         width: 555
-        height: 643
+        height: 639
       alignment: 2
       pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,12 +180,12 @@ TextureImporter:
       name: porta com corda para a conduta_11
       rect:
         serializedVersion: 2
-        x: 21
+        x: 22
         y: 25
         width: 578
         height: 1045
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+      alignment: 9
+      pivot: {x: 0.5259006, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
