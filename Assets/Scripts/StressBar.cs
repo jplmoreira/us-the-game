@@ -36,6 +36,11 @@ public class StressBar : MonoBehaviour {
 	void decrement (int amount) { //asusume que eventou foi bem sucedido
         currentStress -= amount;
         switch (checkpoint) {
+            case 0:
+                if (currentStress < 0) {
+                    currentStress = 0;
+                    stressBar.sizeDelta = new Vector2(currentStress, stressBar.sizeDelta.y);
+                }
             case 25:
                 if (currentStress < 25) {
                     currentStress = 25;
