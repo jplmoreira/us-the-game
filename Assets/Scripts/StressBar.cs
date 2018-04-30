@@ -4,44 +4,58 @@ using UnityEngine;
 
 public class StressBar : MonoBehaviour {
 
+    public int currentStress = 0;
+    public int checkpoint = 0;
+    public RectTransform stressBar;
+
     //AudioSource barAudio = GetComponent<BarAudio>();
     //GameObject vignette = GetComponent.Find("Vignette");
     //GameObject scaryHands = GetComponent.Find("ScaryHands");
     //GameObject gameOver = GetComponent.Find("GameOver");
 
-    int currValue = 0;
-    int checkpoint = 0;
 
-	void increment () { //assume que evento falhou
-        currValue += 15;
-	    if (currValue >= 25 && currValue < 50) {
+
+	void increment (int amount) { //assume que evento falhou
+        currentStress += amount;
+	    if (currentStress >= 25 && currentStress < 50) {
             //vignette.SetActive(true);
             checkpoint = 25;
-        } else if (currValue >= 50 && currValue < 75) {
+        } else if (currentStress >= 50 && currentStress < 75) {
             //barAudio.Play();
             //trocar sprites para scared (animations & idle) mais tarde?
             checkpoint = 50;
-        } else if (currValue >= 75 && currValue < 100) {
+        } else if (currentStress >= 75 && currentStress < 100) {
             //scaryHands.SetActive(true);
             checkpoint = 75;
-        } else if (currValue >= 100) {  //checkar este primeiro? tanto faz?
+        } else if (currentStress >= 100) {  //checkar este primeiro? tanto faz?
             //gameOver.setActive(true);
         }
-	}
+        stressBar.sizeDelta = new Vector2(currentStress, stressBar.sizeDelta.y);
+    }
 	
-	void decrement () { //asusume que eventou foi bem sucedido
-        currValue -= 10;
+	void decrement (int amount) { //asusume que eventou foi bem sucedido
+        currentStress -= amount;
         switch (checkpoint) {
             case 25:
-                if (currValue<25) { currValue = 25; }
+                if (currentStress < 25) {
+                    currentStress = 25;
+                    stressBar.sizeDelta = new Vector2(currentStress, stressBar.sizeDelta.y);
+                }
                 break;
             case 50:
-                if (currValue < 50) { currValue = 50; }
+                if (currentStress < 50) {
+                    currentStress = 50;
+                    stressBar.sizeDelta = new Vector2(currentStress, stressBar.sizeDelta.y);
+                }
                 break;
             case 75:
-                if (currValue < 75) { currValue = 75; }
+                if (currentStress < 75) {
+                    currentStress = 75;
+                    stressBar.sizeDelta = new Vector2(currentStress, stressBar.sizeDelta.y);
+                }
                 break;
             default:
+                stressBar.sizeDelta = new Vector2(currentStress, stressBar.sizeDelta.y);
                 break;
         }
     }
