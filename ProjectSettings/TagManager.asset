@@ -8,6 +8,7 @@ TagManager:
   - Item
   - Hand
   - Stone
+  - Hittable
   layers:
   - Default
   - TransparentFX
