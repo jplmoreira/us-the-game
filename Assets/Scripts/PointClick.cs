@@ -17,7 +17,7 @@ public class PointClick : MonoBehaviour {
     void Start() {
         animator = GetComponent<Animator>();
         interacting = false;
-        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+        GetComponent<Rigidbody2D>().constraints |= RigidbodyConstraints2D.FreezeRotation;
         //am = GameObject.Find("AudioManager");
         //am.Play("LevelBackgroundMusic");
     }
@@ -55,7 +55,6 @@ public class PointClick : MonoBehaviour {
                     GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                     animator.SetBool("Walking", false);
                     move = false;
-
                 }
             }
         }

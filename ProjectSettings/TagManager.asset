@@ -9,6 +9,7 @@ TagManager:
   - Hand
   - Stone
   - Hittable
+  - Floor
   layers:
   - Default
   - TransparentFX

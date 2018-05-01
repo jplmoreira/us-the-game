@@ -8,7 +8,8 @@ public class Climbable : Interactable {
 	
     public void Interact_Climb() {
         Transform currP = CharacterSwap.ins.currP.transform;
-        if (currP.name.Contains("Player1"))
+        if (currP.name.Contains("Player1")) {
             currP.position = climbPos.position;
+        }
     }
 }
