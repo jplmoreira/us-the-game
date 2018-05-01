@@ -17,6 +17,7 @@ public class StressBar : MonoBehaviour {
     private void Awake() {
         ins = this;
     }
+    
 
     public void increment (int amount) { //assume que evento falhou
         currentStress += amount;
