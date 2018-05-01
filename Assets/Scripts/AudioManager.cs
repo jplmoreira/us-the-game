@@ -65,6 +65,7 @@ public class AudioManager : MonoBehaviour {
         s.source.Stop();
 	}
     
+
       
 	// Use this for initialization
 	void Awake () {
@@ -137,7 +138,19 @@ public class AudioManager : MonoBehaviour {
         }
     }
     
+    public void Pause(){
+        foreach(Sound s in musics){
+            
+            s.source.mute = true;
+        }
+    }
     
+    public void Resume(){
+        foreach(Sound s in musics){
+            
+            s.source.mute = false;
+        }
+    }
         
     void Start(){
                 

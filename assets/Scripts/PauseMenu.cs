@@ -15,17 +15,23 @@ public class PauseMenu : MonoBehaviour {
     
     public GameObject pauseMenuUI;
     
+    //public GameObject audioManager = GameObject.Find("AudioManager");
+    
+
     
     //Update- check is space was pressed
     void Update(){
+        
         
         if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Escape)){
             Debug.Log("space key was pressed- pause");
            
             if(gameIsPaused){
                 Resume();
+                //audioManager.Resume();
             }else{
                 Pause();
+                //audioManager.Pause();
             }
             
         }

@@ -7,11 +7,29 @@ public class StressBar : MonoBehaviour {
     public int currentStress = 0;
     public int checkpoint = 0;
     public RectTransform stressBar;
+    
+    
+    //AudioSource barAudio;
+    GameObject vignette;
+    //GameObject scaryHands;
+    GameObject gameOver;
 
+<<<<<<< Updated upstream
     //AudioSource barAudio = GetComponent<BarAudio>();
     GameObject vignette;
     //GameObject scaryHands = GetComponent.Find("ScaryHands");
     GameObject gameOver;
+=======
+    
+    void Awake(){
+        //barAudio = GetComponent<BarAudio>();
+        vignette = GameObject.Find("Vignette");
+        //scaryHands = GetComponent.Find("ScaryHands");
+        gameOver = GameObject.Find("GameOver");
+    }
+    
+
+>>>>>>> Stashed changes
 
     private void Awake() {
         vignette = GameObject.Find("Vignette");
