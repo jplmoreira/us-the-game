@@ -59,4 +59,8 @@ public class PointClick : MonoBehaviour {
             }
         }
     }
+
+    public void StopMoving() {
+        targetPosition = transform.position;
+    }
 }

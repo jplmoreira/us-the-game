@@ -9,13 +9,16 @@ public class StressBar : MonoBehaviour {
     public RectTransform stressBar;
 
     //AudioSource barAudio = GetComponent<BarAudio>();
-    GameObject vignette = GameObject.Find("Vignette");
+    GameObject vignette;
     //GameObject scaryHands = GetComponent.Find("ScaryHands");
-    GameObject gameOver = GameObject.Find("GameOver");
+    GameObject gameOver;
 
+    private void Awake() {
+        vignette = GameObject.Find("Vignette");
+        gameOver = GameObject.Find("GameOver");
+    }
 
-
-	void increment (int amount) { //assume que evento falhou
+    void increment (int amount) { //assume que evento falhou
         currentStress += amount;
 	    if (currentStress >= 25 && currentStress < 50) {
             vignette.SetActive(true);
