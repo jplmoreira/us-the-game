@@ -90,6 +90,7 @@ public class Inventory : MonoBehaviour {
 
 	public void CombineCraft() {
         if (craftTable.Count > 0) {
+            Debug.Log("Crafting...");
             string[] ingredients = new string[craftTable.Count];
             IIventoryItem[] items = new IIventoryItem[craftTable.Count];
             for (int i = 0; i < craftTable.Count; i++) {
@@ -110,6 +111,7 @@ public class Inventory : MonoBehaviour {
                 CharacterSwap.ins.DeselectItem(CharacterSwap.ins.currItem);
                 GameObject craftingTable = GameObject.Find("HUD").transform.Find("CraftingTable").gameObject;
                 craftingTable.SetActive(false);
+                StressBar.ins.decrement(20);
             }
         }
     }

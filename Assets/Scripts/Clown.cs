@@ -5,11 +5,16 @@ using UnityEngine;
 public class Clown : Climbable {
 
     public Transform pushPos;
+    bool scared = false;
 
     public void Interact_Interact() {
         Animator anim = GetComponent<Animator>();
         if (anim != null) {
             anim.SetBool("Opened", !anim.GetBool("Opened"));
+        }
+        if (!scared) {
+            StressBar.ins.increment(40);
+            scared = true;
         }
     }
 

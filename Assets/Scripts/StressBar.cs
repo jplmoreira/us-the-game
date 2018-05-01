@@ -7,18 +7,18 @@ public class StressBar : MonoBehaviour {
     public int currentStress = 0;
     public int checkpoint = 0;
     public RectTransform stressBar;
+    public static StressBar ins;
 
     //AudioSource barAudio = GetComponent<BarAudio>();
-    GameObject vignette;
+    public GameObject vignette;
     //GameObject scaryHands = GetComponent.Find("ScaryHands");
-    GameObject gameOver;
+    public GameObject gameOver;
 
     private void Awake() {
-        vignette = GameObject.Find("Vignette");
-        gameOver = GameObject.Find("GameOver");
+        ins = this;
     }
 
-    void increment (int amount) { //assume que evento falhou
+    public void increment (int amount) { //assume que evento falhou
         currentStress += amount;
 	    if (currentStress >= 25 && currentStress < 50) {
             vignette.SetActive(true);
@@ -37,7 +37,7 @@ public class StressBar : MonoBehaviour {
         stressBar.sizeDelta = new Vector2(currentStress, stressBar.sizeDelta.y);
     }
 	
-	void decrement (int amount) { //asusume que eventou foi bem sucedido
+	public void decrement (int amount) { //asusume que eventou foi bem sucedido
         currentStress -= amount;
         switch (checkpoint) {
             case 0:

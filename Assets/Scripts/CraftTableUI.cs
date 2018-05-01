@@ -30,7 +30,7 @@ public class CraftTableUI : MonoBehaviour {
 		foreach (Transform slot in craftItems) {
 			Image image = slot.GetChild (0).GetComponent<Image> ();
 			CraftItemHandler craftItem = slot.GetComponent<CraftItemHandler> ();
-			if (craftItem.item.Equals(e.Item)) {
+			if (e.Item.Equals(craftItem.item)) {
                 image.sprite = null;
                 image.enabled = false;
 				craftItem.item = null;
