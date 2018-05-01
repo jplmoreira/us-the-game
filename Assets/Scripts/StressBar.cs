@@ -14,12 +14,6 @@ public class StressBar : MonoBehaviour {
     //GameObject scaryHands;
     GameObject gameOver;
 
-<<<<<<< Updated upstream
-    //AudioSource barAudio = GetComponent<BarAudio>();
-    GameObject vignette;
-    //GameObject scaryHands = GetComponent.Find("ScaryHands");
-    GameObject gameOver;
-=======
     
     void Awake(){
         //barAudio = GetComponent<BarAudio>();
@@ -28,13 +22,6 @@ public class StressBar : MonoBehaviour {
         gameOver = GameObject.Find("GameOver");
     }
     
-
->>>>>>> Stashed changes
-
-    private void Awake() {
-        vignette = GameObject.Find("Vignette");
-        gameOver = GameObject.Find("GameOver");
-    }
 
     void increment (int amount) { //assume que evento falhou
         currentStress += amount;
