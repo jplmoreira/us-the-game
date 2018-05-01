@@ -110,7 +110,7 @@ public class AudioManager : MonoBehaviour {
             Play("BackgroundMusic");
             Stop("LevelBackgroundMusic");
 
-        }else if(String.Compare(currentScene, "Protoype") == 0){
+        }else if(String.Compare(currentScene, "Demo") == 0){
             Debug.Log("play o level!!!");
             
             Play("LevelBackgroundMusic");
@@ -148,7 +148,7 @@ public class AudioManager : MonoBehaviour {
             Debug.Log("play o menu!!!");
             Play("BackgroundMusic");
             Stop("LevelBackgroundMusic");
-        }else if(String.Compare(currentScene, "Protoype") == 0){
+        }else if(String.Compare(currentScene, "Demo") == 0){
             
             Debug.Log("play o level!!!");
             Play("LevelBackgroundMusic");
