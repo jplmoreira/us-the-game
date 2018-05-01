@@ -11,7 +11,7 @@ public class StressBar : MonoBehaviour {
     //AudioSource barAudio = GetComponent<BarAudio>();
     //GameObject vignette = GetComponent.Find("Vignette");
     //GameObject scaryHands = GetComponent.Find("ScaryHands");
-    //GameObject gameOver = GetComponent.Find("GameOver");
+    GameObject gameOver = GameObject.Find("GameOver");
 
 
 
@@ -28,7 +28,8 @@ public class StressBar : MonoBehaviour {
             //scaryHands.SetActive(true);
             checkpoint = 75;
         } else if (currentStress >= 100) {  //checkar este primeiro? tanto faz?
-            //gameOver.setActive(true);
+            Time.timeScale = 0f;
+            gameOver.SetActive(true);
         }
         stressBar.sizeDelta = new Vector2(currentStress, stressBar.sizeDelta.y);
     }
