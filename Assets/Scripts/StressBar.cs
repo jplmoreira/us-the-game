@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class StressBar : MonoBehaviour {
 
@@ -11,13 +12,15 @@ public class StressBar : MonoBehaviour {
 
     //AudioSource barAudio = GetComponent<BarAudio>();
     public GameObject vignette;
+	Animator vigAnim;
     //GameObject scaryHands = GetComponent.Find("ScaryHands");
     public GameObject gameOver;
 
 	float width;
 
     private void Awake() {
-        ins = this;
+		ins = this;
+		vigAnim = vignette.GetComponent<Animator> ();
 		width = stressBar.parent.gameObject.GetComponent<RectTransform>().sizeDelta.x;
     }
     
@@ -32,9 +35,11 @@ public class StressBar : MonoBehaviour {
             //barAudio.Play();
             //trocar sprites para scared (animations & idle) mais tarde?
             checkpoint = 50;
+			vigAnim.speed = 1.5f;
         } else if (currentStress >= 75 && currentStress < 100) {
             //scaryHands.SetActive(true);
             checkpoint = 75;
+			vigAnim.speed = 2f;
         } else if (currentStress >= 100) {  //checkar este primeiro? tanto faz?
             Time.timeScale = 0f;
             gameOver.SetActive(true);
