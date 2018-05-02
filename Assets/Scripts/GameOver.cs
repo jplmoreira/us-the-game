@@ -12,7 +12,7 @@ public class GameOver : MonoBehaviour {
     public void Restart(){
         
         SceneManager.LoadScene("Demo");        
-        Time.timeScale = 0f;
+        Time.timeScale = 1f;
     }
 
     
