@@ -6,6 +6,7 @@ public class Clown : Climbable {
 
     public Transform pushPos;
     bool scared = false;
+    bool pushed = false;
 
     public void Interact_Interact() {
         Animator anim = GetComponent<Animator>();
@@ -19,8 +20,9 @@ public class Clown : Climbable {
     }
 
     public void Interact_Push() {
-        if (CharacterSwap.ins.currP.transform.name.Contains("Player4"))
-            if (!transform.position.Equals(pushPos))
-                transform.position = pushPos.position;
+        if (CharacterSwap.ins.currP.transform.name.Contains("Player4") && !pushed) {
+            pushed = true;
+            transform.position = pushPos.position;
+        }
     }
 }
