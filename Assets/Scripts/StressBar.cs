@@ -22,6 +22,8 @@ public class StressBar : MonoBehaviour {
     public void increment (int amount) { //assume que evento falhou
         currentStress += amount;
 	    if (currentStress >= 25 && currentStress < 50) {
+            //vignette = 
+            Debug.Log("entrei");
             vignette.SetActive(true);
             checkpoint = 25;
         } else if (currentStress >= 50 && currentStress < 75) {
