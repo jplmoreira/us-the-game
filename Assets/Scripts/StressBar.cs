@@ -22,9 +22,12 @@ public class StressBar : MonoBehaviour {
     public void increment (int amount) { //assume que evento falhou
         currentStress += amount;
 	    if (currentStress >= 25 && currentStress < 50) {
-            //vignette = 
             Debug.Log("entrei");
             vignette.SetActive(true);
+            Time.timeScale = 1f;
+            if(vignette.active){
+                Debug.Log("estou ativa");
+            }
             checkpoint = 25;
         } else if (currentStress >= 50 && currentStress < 75) {
             //barAudio.Play();
@@ -40,6 +43,7 @@ public class StressBar : MonoBehaviour {
         stressBar.sizeDelta = new Vector2(currentStress, stressBar.sizeDelta.y);
     }
 	
+    
 	public void decrement (int amount) { //asusume que eventou foi bem sucedido
         currentStress -= amount;
         switch (checkpoint) {
