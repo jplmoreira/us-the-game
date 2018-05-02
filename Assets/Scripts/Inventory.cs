@@ -90,7 +90,6 @@ public class Inventory : MonoBehaviour {
 
 	public void CombineCraft() {
         if (craftTable.Count > 0) {
-            Debug.Log("Crafting...");
             string[] ingredients = new string[craftTable.Count];
             IIventoryItem[] items = new IIventoryItem[craftTable.Count];
             for (int i = 0; i < craftTable.Count; i++) {

@@ -14,20 +14,19 @@ public class StressBar : MonoBehaviour {
     //GameObject scaryHands = GetComponent.Find("ScaryHands");
     public GameObject gameOver;
 
+	float width;
+
     private void Awake() {
         ins = this;
+		width = stressBar.parent.gameObject.GetComponent<RectTransform>().sizeDelta.x;
     }
     
 
     public void increment (int amount) { //assume que evento falhou
         currentStress += amount;
 	    if (currentStress >= 25 && currentStress < 50) {
-            Debug.Log("entrei");
-            vignette.SetActive(true);
-            Time.timeScale = 1f;
-            if(vignette.active){
-                Debug.Log("estou ativa");
-            }
+			vignette.SetActive(true);
+			Time.timeScale = 1f;
             checkpoint = 25;
         } else if (currentStress >= 50 && currentStress < 75) {
             //barAudio.Play();
@@ -40,39 +39,46 @@ public class StressBar : MonoBehaviour {
             Time.timeScale = 0f;
             gameOver.SetActive(true);
         }
-        stressBar.sizeDelta = new Vector2(currentStress, stressBar.sizeDelta.y);
+		float percent = (float) currentStress / 100f;
+		stressBar.sizeDelta = new Vector2(percent*width, stressBar.sizeDelta.y);
     }
 	
     
 	public void decrement (int amount) { //asusume que eventou foi bem sucedido
         currentStress -= amount;
+		float percent;
         switch (checkpoint) {
             case 0:
                 if (currentStress < 0) {
                     currentStress = 0;
-                    stressBar.sizeDelta = new Vector2(currentStress, stressBar.sizeDelta.y);
+					percent = (float) currentStress / 100f;
+					stressBar.sizeDelta = new Vector2(percent*width, stressBar.sizeDelta.y);
                 }
                 break;
             case 25:
                 if (currentStress < 25) {
                     currentStress = 25;
-                    stressBar.sizeDelta = new Vector2(currentStress, stressBar.sizeDelta.y);
+					percent = (float) currentStress / 100f;
+					stressBar.sizeDelta = new Vector2(percent*width, stressBar.sizeDelta.y);
                 }
                 break;
             case 50:
                 if (currentStress < 50) {
                     currentStress = 50;
-                    stressBar.sizeDelta = new Vector2(currentStress, stressBar.sizeDelta.y);
+					percent = (float) currentStress / 100f;
+					stressBar.sizeDelta = new Vector2(percent*width, stressBar.sizeDelta.y);
                 }
                 break;
             case 75:
                 if (currentStress < 75) {
                     currentStress = 75;
-                    stressBar.sizeDelta = new Vector2(currentStress, stressBar.sizeDelta.y);
+					percent = (float) currentStress / 100f;
+					stressBar.sizeDelta = new Vector2(percent*width, stressBar.sizeDelta.y);
                 }
                 break;
             default:
-                stressBar.sizeDelta = new Vector2(currentStress, stressBar.sizeDelta.y);
+				percent = (float) currentStress / 100f;
+				stressBar.sizeDelta = new Vector2((currentStress/100)*width, stressBar.sizeDelta.y);
                 break;
         }
     }

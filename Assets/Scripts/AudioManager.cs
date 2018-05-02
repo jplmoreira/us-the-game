@@ -21,9 +21,7 @@ public class AudioManager : MonoBehaviour {
     
     
     public void Play (string name) {
-		
-        Debug.Log("entrei no play " + name);
-        
+		        
         Sound s;
         
         if(Array.Find(sounds, sound => sound.name == name) != null){
@@ -44,9 +42,7 @@ public class AudioManager : MonoBehaviour {
     
     
     public void Stop (string name) {
-		
-        Debug.Log("entrei no stop " + name);
-        
+		        
         Sound s;
         
         if(Array.Find(sounds, sound => sound.name == name) != null){
@@ -71,9 +67,7 @@ public class AudioManager : MonoBehaviour {
 	void Awake () {
         
         currentScene = SceneManager.GetActiveScene().name;
-        
-        Debug.Log("entrei no awake em "+ currentScene);
-        
+                
 //        if(instance == null){
 //            instance = this;
 //        }else{
@@ -106,14 +100,12 @@ public class AudioManager : MonoBehaviour {
         }
         
         if(String.Compare(currentScene, "Home Menu") == 0){
-            Debug.Log("play o menu!!!");
             
             Play("BackgroundMusic");
             Stop("LevelBackgroundMusic");
 
         }else if(String.Compare(currentScene, "Demo") == 0){
-            Debug.Log("play o level!!!");
-            
+			
             Play("LevelBackgroundMusic");
             Stop("BackgroundMusic");
         }
@@ -153,17 +145,13 @@ public class AudioManager : MonoBehaviour {
     }
         
     void Start(){
-                
-        Debug.Log("entrei no start em "+ currentScene);
-        
+                        
         if(String.Compare(currentScene, "Home Menu") == 0){
             
-            Debug.Log("play o menu!!!");
             Play("BackgroundMusic");
             Stop("LevelBackgroundMusic");
         }else if(String.Compare(currentScene, "Demo") == 0){
             
-            Debug.Log("play o level!!!");
             Play("LevelBackgroundMusic");
             Stop("BackgroundMusic");
         }
