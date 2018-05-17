@@ -10,10 +10,10 @@ public class StressBar : MonoBehaviour {
     public RectTransform stressBar;
     public static StressBar ins;
 
-    //AudioSource barAudio = GetComponent<BarAudio>();
+    public AudioManager audioManager;
     public GameObject vignette;
 	Animator vigAnim;
-    //GameObject scaryHands = GetComponent.Find("ScaryHands");
+    //public GameObject scaryHands = GetComponent.Find("ScaryHands");
     public GameObject gameOver;
 
 	float width;
@@ -34,6 +34,7 @@ public class StressBar : MonoBehaviour {
         } else if (currentStress >= 50 && currentStress < 75) {
             //barAudio.Play();
             //trocar sprites para scared (animations & idle) mais tarde?
+            audioManager.Play("LaughStepsSinging");
             checkpoint = 50;
 			vigAnim.speed = 1.5f;
         } else if (currentStress >= 75 && currentStress < 100) {

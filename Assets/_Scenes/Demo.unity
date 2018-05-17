@@ -1341,7 +1341,7 @@ Prefab:
     - target: {fileID: 114831758379032246, guid: 58d5b26fbb3d64bc892907c7e7f2905f,
         type: 2}
       propertyPath: sounds.Array.size
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4173701067826562, guid: 58d5b26fbb3d64bc892907c7e7f2905f, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1598,6 +1598,26 @@ Prefab:
     - target: {fileID: 114831758379032246, guid: 58d5b26fbb3d64bc892907c7e7f2905f,
         type: 2}
       propertyPath: sounds.Array.data[10].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114831758379032246, guid: 58d5b26fbb3d64bc892907c7e7f2905f,
+        type: 2}
+      propertyPath: sounds.Array.data[11].name
+      value: LaughStepsSinging
+      objectReference: {fileID: 0}
+    - target: {fileID: 114831758379032246, guid: 58d5b26fbb3d64bc892907c7e7f2905f,
+        type: 2}
+      propertyPath: sounds.Array.data[11].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: b0e1798860cad43d982b9fabe1c0e240, type: 3}
+    - target: {fileID: 114831758379032246, guid: 58d5b26fbb3d64bc892907c7e7f2905f,
+        type: 2}
+      propertyPath: sounds.Array.data[11].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114831758379032246, guid: 58d5b26fbb3d64bc892907c7e7f2905f,
+        type: 2}
+      propertyPath: sounds.Array.data[11].pitch
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3183,6 +3203,7 @@ MonoBehaviour:
   currentStress: 0
   checkpoint: 0
   stressBar: {fileID: 1814331666}
+  audioManager: {fileID: 1090050259}
   vignette: {fileID: 213525023}
   gameOver: {fileID: 1278023590}
 --- !u!1 &1057517326
