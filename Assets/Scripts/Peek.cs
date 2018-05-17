@@ -37,6 +37,7 @@ public class Peek : MonoBehaviour {
             move = true;
         }
         if (move) {
+            
             Vector2 newPos = Vector2.Lerp(truePos, targetPos, Time.deltaTime * 1);
             transform.position = new Vector3(newPos.x, newPos.y, z);
             if (Vector2.Distance(transform.position, targetPos) < 0.01) {
