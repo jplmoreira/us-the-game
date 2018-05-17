@@ -27,7 +27,16 @@ public class StressBar : MonoBehaviour {
 
     public void increment (int amount) { //assume que evento falhou
         currentStress += amount;
-	    if (currentStress >= 25 && currentStress < 50) {
+        
+        
+        if(currentStress < 10){
+            audioManager.Play("DoorCloses");
+            
+        }else if(currentStress >= 10 && currentStress < 25){
+            audioManager.Play("LaughWoman2");
+            
+        }else if (currentStress >= 25 && currentStress < 50) {
+            audioManager.Play("DoorSqueack");
 			vignette.SetActive(true);
 			Time.timeScale = 1f;
             checkpoint = 25;
@@ -37,10 +46,13 @@ public class StressBar : MonoBehaviour {
             audioManager.Play("LaughStepsSinging");
             checkpoint = 50;
 			vigAnim.speed = 1.5f;
+            audioManager.Play("LaughClown");
         } else if (currentStress >= 75 && currentStress < 100) {
             //scaryHands.SetActive(true);
             checkpoint = 75;
 			vigAnim.speed = 2f;
+            audioManager.Play("Heartbeat");
+
         } else if (currentStress >= 100) {  //checkar este primeiro? tanto faz?
             Time.timeScale = 0f;
             gameOver.SetActive(true);
