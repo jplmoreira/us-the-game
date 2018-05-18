@@ -5,6 +5,7 @@ using UnityEngine;
 public class Drawer : Interactable {
 
     GameObject child = null;
+    public AudioManager audioManager;
 
     private void Awake() {
         if (transform.childCount > 0)
@@ -13,8 +14,10 @@ public class Drawer : Interactable {
 
     public void Interact_Open() {
         Animator anim = GetComponent<Animator>();
-        if (anim != null)
+        if (anim != null){
             anim.SetBool("Opened", true);
+            audioManager.Play("DrawerShelve");
+        }
         GetComponent<Collider2D>().enabled = false;
         if (child != null)
             StartCoroutine(ActivateChild());

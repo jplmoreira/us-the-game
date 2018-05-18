@@ -30,6 +30,9 @@ public class CharacterSwap : MonoBehaviour {
 	public static CharacterSwap ins;
     [HideInInspector]
     public IIventoryItem currItem;
+    
+    
+    public AudioManager audioManager;
 
     private void Awake() {
 		ins = this;
@@ -170,6 +173,7 @@ public class CharacterSwap : MonoBehaviour {
             goItem.SetActive(false);
             currItem = null;
         }
+        audioManager.Stop("AimSlingshot");
     }
 }
 

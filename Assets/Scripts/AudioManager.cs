@@ -144,13 +144,30 @@ public class AudioManager : MonoBehaviour {
         }
     }
     
+    public bool isPlayingThisSound(string name){
+                
+        bool isPlayingOrNot = false;
+        
+        Sound ss;
+        
+        if(Array.Find(sounds, sound => sound.name == name) != null){
+            
+            ss = Array.Find(sounds, sound => sound.name == name);
+            
+            if(ss.source.isPlaying && String.Compare(ss.source.name, "LaughStepsSinging") != 0 ){
+                isPlayingOrNot = true;
+            }
+
+        }
+
+        return isPlayingOrNot;
+
     
+    }
 
     
     public bool isPlayingSound(){
-        
-        Debug.Log("entrei no isPlayingSound()");
-        
+                
         bool isPlayingOrNot = false;
         
         foreach(Sound ss in sounds){
