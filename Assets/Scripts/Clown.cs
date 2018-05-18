@@ -13,7 +13,6 @@ public class Clown : Climbable {
         Animator anim = GetComponent<Animator>();
         if (anim != null) {
             audioManager.Play("ClownBox");
-
             anim.SetBool("Opened", !anim.GetBool("Opened"));
         }
         if (!scared) {
