@@ -9,7 +9,7 @@ public class PointClick : MonoBehaviour {
     private Vector2 targetPosition;
     private bool move = false;
     Animator animator;
-    public GameObject audioManager;
+    //public AudioManager audioManager;
     [HideInInspector]
     public bool interacting;
     
@@ -18,8 +18,9 @@ public class PointClick : MonoBehaviour {
         animator = GetComponent<Animator>();
         interacting = false;
         GetComponent<Rigidbody2D>().constraints |= RigidbodyConstraints2D.FreezeRotation;
-        //am = GameObject.Find("AudioManager");
-        //am.Play("LevelBackgroundMusic");
+        
+        //audioManager.Play("LevelBackgroundMusic");
+
     }
 
     // Update is called once per frame

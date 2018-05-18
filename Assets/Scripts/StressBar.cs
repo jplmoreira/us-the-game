@@ -36,17 +36,25 @@ public class StressBar : MonoBehaviour {
             audioManager.Play("LaughWoman2");
             
         }else if (currentStress >= 25 && currentStress < 50) {
-            audioManager.Play("DoorSqueack");
-			vignette.SetActive(true);
+
+            vignette.SetActive(true);
 			Time.timeScale = 1f;
             checkpoint = 25;
+            
+            //while(audioManager.isPlayingSound()){
+              //  Debug.Log("ainda tá a tocar o palhaço");
+            //}
+            
+            audioManager.Play("DoorSqueack");
+			
+            
         } else if (currentStress >= 50 && currentStress < 75) {
             //barAudio.Play();
             //trocar sprites para scared (animations & idle) mais tarde?
             audioManager.Play("LaughStepsSinging");
             checkpoint = 50;
 			vigAnim.speed = 1.5f;
-            audioManager.Play("LaughClown");
+            audioManager.Play("LaughWitch");
         } else if (currentStress >= 75 && currentStress < 100) {
             //scaryHands.SetActive(true);
             checkpoint = 75;

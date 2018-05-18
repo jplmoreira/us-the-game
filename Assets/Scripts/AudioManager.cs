@@ -143,6 +143,22 @@ public class AudioManager : MonoBehaviour {
             s.source.mute = false;
         }
     }
+    
+    public bool isPlayingSound(){
+        bool isOrNot = false;
+        
+        Debug.Log("entrei no isPlayingSound()");
+        
+        foreach(Sound s in sounds){
+            
+            if(s.source.isPlaying && s.source.name != "LaughStepsSinging"){
+                isOrNot = true;
+            }else{}
+
+        }
+        
+        return isOrNot;
+    }
         
     void Start(){
                         
