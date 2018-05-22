@@ -89,7 +89,7 @@ Rigidbody2D:
   m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1000
+  m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: 8d40fd7a4cb39466497494ff3f3e3ada, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -152,6 +152,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114182841284836688
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -164,10 +165,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  obstacles:
-    serializedVersion: 2
-    m_Bits: 256
-  audioManager: {fileID: 0}
   interacting: 0
 --- !u!114 &114639511781923742
 MonoBehaviour:
@@ -197,6 +194,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
