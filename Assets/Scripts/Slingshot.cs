@@ -6,6 +6,7 @@ public class Slingshot : Item {
 
 	public override void OnUse() {
         if(CharacterSwap.ins.currP.name.Contains("Player3")) {
+			canInteract = !canInteract;
             CharacterSwap.ins.currP.GetComponent<PointClick>().interacting = !CharacterSwap.ins.currP.GetComponent<PointClick>().interacting;
             Transform arm = CharacterSwap.ins.currP.transform.Find("Arm");
             arm.gameObject.SetActive(!arm.gameObject.activeSelf);

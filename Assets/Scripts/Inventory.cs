@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour {
 
-    private const int SLOTS = 9;
+    private const int SLOTS = 5;
 	private List<IIventoryItem>[] mItems = new List<IIventoryItem>[4];
 	private List<IIventoryItem> craftTable = new List<IIventoryItem> ();
     public event EventHandler<InventoryEventArgs> ItemAdded;

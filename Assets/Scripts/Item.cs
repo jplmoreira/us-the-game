@@ -34,7 +34,9 @@ public class Item : Interactable, IIventoryItem {
         gameObject.SetActive(true);
     }
 
-    public virtual void OnUse() {}
+	public virtual void OnUse() {
+		canInteract = !canInteract;
+	}
 
     public GameObject GetObject() {
         return gameObject;

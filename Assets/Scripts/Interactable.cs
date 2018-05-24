@@ -5,6 +5,8 @@ using UnityEngine;
 public abstract class Interactable : MonoBehaviour {
     public string title;
 
+	public bool canInteract = true;
+
 	// Use this for initialization
 	void Start () {
 		if (title == "" || title == null ) {
