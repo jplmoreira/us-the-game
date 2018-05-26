@@ -10,6 +10,7 @@ TagManager:
   - Stone
   - Hittable
   - Floor
+  - DialogueBox
   layers:
   - Default
   - TransparentFX

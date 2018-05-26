@@ -12,10 +12,10 @@ public class Clown : Climbable {
     public void Interact_Interact() {
         Animator anim = GetComponent<Animator>();
         if (anim != null) {
-            audioManager.Play("ClownBox");
             anim.SetBool("Opened", !anim.GetBool("Opened"));
         }
         if (!scared) {
+            audioManager.Play("ClownBox");
             StressBar.ins.increment(40);
             scared = true;
         }
@@ -27,6 +27,8 @@ public class Clown : Climbable {
             pushed = true;
             transform.position = pushPos.position;
             
+        } else if (!pushed) {
+            DialogueManager.ins.NewDialogue("I'm not strong enough to push this!");
         }
     }
 }
