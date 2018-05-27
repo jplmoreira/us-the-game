@@ -23,7 +23,7 @@ public abstract class Interactable : MonoBehaviour {
             if (CharacterSwap.ins.currP.GetComponent<Interact>().Reachable(this.gameObject))
                 RadialMenuSpawner.ins.SpawnMenu(this);
             else
-                Debug.Log("Out of reach!");
+                DialogueManager.ins.NewDialogue("I can't reach that!");
         }
 	}
 

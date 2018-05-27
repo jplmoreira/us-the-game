@@ -160,6 +160,7 @@ public class CharacterSwap : MonoBehaviour {
             GameObject goItem = (item as MonoBehaviour).gameObject;
             goItem.transform.parent = hand.transform;
             goItem.transform.position = hand.transform.position;
+            goItem.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
             goItem.SetActive(true);
             currItem = item;
         }
@@ -170,6 +171,7 @@ public class CharacterSwap : MonoBehaviour {
             currItem.OnUse();
             GameObject goItem = (currItem as MonoBehaviour).gameObject;
             goItem.transform.parent = null;
+            goItem.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             goItem.SetActive(false);
             currItem = null;
         }

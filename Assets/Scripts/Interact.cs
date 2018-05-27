@@ -16,13 +16,11 @@ public class Interact : MonoBehaviour {
 		foreach (RaycastHit2D hit in hits) {
 			string title = obj.gameObject.GetComponent<Interactable> ().title;
 			if (hit.transform.tag.Equals("Floor")) {
-                DialogueManager.ins.NewDialogue("I can't reach that!");
 				return false;
 			} else if (hit.transform.gameObject.GetComponent<Interactable> ().title.Equals (title)) {
 				return true;
 			}
 		}
-        DialogueManager.ins.NewDialogue("I can't reach that!");
 		return false;
 	}
 }

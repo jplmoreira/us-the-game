@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   title: Craft Tool
+  canInteract: 1
   _Name: Craft Tool
   _Image: {fileID: 21300000, guid: 534a5e00f7c50a04c96eaab068c01854, type: 3}
 --- !u!212 &212607785721902512
@@ -115,6 +116,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
