@@ -14,6 +14,7 @@ public class Bridge : Interactable {
                 GetComponent<BoxCollider2D>().enabled = false;
                 GetComponent<Animator>().SetBool("opened", true);
                 hole.SetActive(false);
+                opened = true;
             }
         } else
             DialogueManager.ins.NewDialogue("I am not strong enough to push this!");
