@@ -177,6 +177,51 @@ public class CharacterSwap : MonoBehaviour {
         }
         audioManager.Stop("AimSlingshot");
     }
+
+    public int CharacterBetween(float xl, float xr) {
+        int res = 0;
+        if (pos1.x >= xl && pos1.x <= xr) {
+            res = 1;
+        }
+        if (pos2.x >= xl && pos2.x <= xr) {
+            if (res != 0)
+                return -1;
+            res = 2;
+        }
+        if (pos3.x >= xl && pos3.x <= xr) {
+            if (res != 0)
+                return -1;
+            res = 3;
+        }
+        if (pos4.x >= xl && pos4.x <= xr) {
+            if (res != 0)
+                return -1;
+            res = 4;
+        }
+        return res;
+    }
+
+    public void ChangePosition(int player, Vector3 pos) {
+        switch (player) {
+            case 0:
+                break;
+            case 1:
+                pos1 = pos;
+                break;
+            case 2:
+                pos2 = pos;
+                break;
+            case 3:
+                pos3 = pos;
+                break;
+            case 4:
+                pos4 = pos;
+                break;
+            default:
+                Debug.LogError("There's no such player");
+                return;
+        }
+    }
 }
 
 public class CharacterSwapArgs : EventArgs {
