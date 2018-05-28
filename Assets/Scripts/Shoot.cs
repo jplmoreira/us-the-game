@@ -21,7 +21,7 @@ public class Shoot : MonoBehaviour {
         time += Time.deltaTime;
         var foundedObjects = FindObjectsOfType<AudioManager>();
         audioManager = foundedObjects[0];
-        if (time >= shootCD && Input.GetButtonDown("Fire1")) {
+        if (time >= shootCD && Input.GetButton("Fire1")) {
             if(audioManager.isPlayingThisSound("AimSlingshot")){
                 audioManager.Stop("AimSlingshot");
             }
