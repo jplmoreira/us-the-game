@@ -100,8 +100,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   title: Slingshot
+  canInteract: 1
   _Name: Slingshot
   _Image: {fileID: 21300000, guid: 96cab0655c4edfe4e9f6aab29ae2d088, type: 3}
+  blueOffset: 0.5
 --- !u!212 &212974615203272362
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -115,6 +117,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:

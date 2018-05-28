@@ -6,8 +6,10 @@ public class Slingshot : Item {
 
     bool shining = false;
     GameObject[] hitObjs;
+    float t = 0f;
 
-    public int blueOffset = 150;
+    float upperLimit = 1f;
+    float lowerLimit = 0f;
 
     void Awake() {
         hitObjs = GameObject.FindGameObjectsWithTag("Hittable");
@@ -17,22 +19,35 @@ public class Slingshot : Item {
         if(CharacterSwap.ins.currP.name.Contains("Player3")) {
 			canInteract = !canInteract;
             shining = !shining;
-            StartCoroutine(Shine());
+            ResetColor();
             CharacterSwap.ins.currP.GetComponent<PointClick>().interacting = !CharacterSwap.ins.currP.GetComponent<PointClick>().interacting;
             Transform arm = CharacterSwap.ins.currP.transform.Find("Arm");
             arm.gameObject.SetActive(!arm.gameObject.activeSelf);
         }
     }
 
-    IEnumerator Shine() {
-        yield return new WaitForSeconds(0.5f);
+    void ResetColor() {
+        foreach (GameObject obj in hitObjs) {
+            obj.GetComponent<SpriteRenderer>().color = Color.white;
+        }
+        upperLimit = 1f;
+        lowerLimit = 0f;
+    }
+
+    private void Update() {
         if (shining) {
+            float blue = Mathf.Lerp(upperLimit, lowerLimit, t);
             foreach (GameObject obj in hitObjs) {
-                Color color = obj.GetComponent<SpriteRenderer>().color;
-                obj.GetComponent<SpriteRenderer>().color = new Color(color.r, color.g, color.b - blueOffset);
+                Color color = new Color(1f, 1f, blue);
+                obj.GetComponent<SpriteRenderer>().color = color;
             }
-            blueOffset *= -1;
-            StartCoroutine(Shine());
+            t += Time.deltaTime;
+            if (t > 1f) {
+                float temp = upperLimit;
+                upperLimit = lowerLimit;
+                lowerLimit = temp;
+                t = 0f;
+            }
         }
     }
 }
