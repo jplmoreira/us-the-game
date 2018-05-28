@@ -12,14 +12,16 @@ public class ItemClickHandler : MonoBehaviour {
         IIventoryItem item = dragHandler.Item;
 
         if (item != null) {
-            if (!picked) {
-                Inventory.ins.SelectItem(item);
-                item.OnUse();
-                picked = true;
-            } else {
-                CharacterSwap.ins.DeselectItem(item);
-                picked = false;
-            }   
+            if (!(item.Name != "Slingshot" && item.Name != "Craft Tool" && CharacterSwap.ins.currP.GetComponent<PointClick>().interacting)) {
+                if (!picked) {
+                    Inventory.ins.SelectItem(item);
+                    item.OnUse();
+                    picked = true;
+                } else {
+                    CharacterSwap.ins.DeselectItem(item);
+                    picked = false;
+                }
+            }
         }
     }
 }

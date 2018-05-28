@@ -22,6 +22,10 @@ public class ArmRotation : MonoBehaviour {
         Vector3 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.parent.position;
         diff.Normalize();
         float rotZ = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
+        float degOffset = 0;
+        if (transform.parent.transform.localScale.x < 0)
+            degOffset = 180f;
+        rotZ += degOffset;
         transform.rotation = Quaternion.Euler(0f, 0f, rotZ);
     }
 }
