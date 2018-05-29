@@ -28,7 +28,7 @@ public class Clown : Climbable {
             transform.position = pushPos.position;
             
         } else if (!pushed) {
-            DialogueManager.ins.NewDialogue("I'm not strong enough to push this!");
+            DialogueManager.ins.NewDialogue("I'm not strong enough to push this!\nMaybe Chuck could push it.");
         }
     }
 }

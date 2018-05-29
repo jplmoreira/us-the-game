@@ -15,14 +15,15 @@ public class Slingshot : Item {
     }
 
     public override void OnUse() {
-        if(CharacterSwap.ins.currP.name.Contains("Player3")) {
+		if (CharacterSwap.ins.currP.name.Contains ("Player3")) {
 			canInteract = !canInteract;
-            shining = !shining;
-            ResetColor();
-            CharacterSwap.ins.currP.GetComponent<PointClick>().interacting = !CharacterSwap.ins.currP.GetComponent<PointClick>().interacting;
-            Transform arm = CharacterSwap.ins.currP.transform.Find("Arm");
-            arm.gameObject.SetActive(!arm.gameObject.activeSelf);
-        }
+			shining = !shining;
+			ResetColor ();
+			CharacterSwap.ins.currP.GetComponent<PointClick> ().interacting = !CharacterSwap.ins.currP.GetComponent<PointClick> ().interacting;
+			Transform arm = CharacterSwap.ins.currP.transform.Find ("Arm");
+			arm.gameObject.SetActive (!arm.gameObject.activeSelf);
+		} else
+			DialogueManager.ins.NewDialogue ("This belongs to Piper.");
     }
 
     void ResetColor() {

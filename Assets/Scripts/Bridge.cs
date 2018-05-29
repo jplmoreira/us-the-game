@@ -17,6 +17,6 @@ public class Bridge : Interactable {
                 opened = true;
             }
         } else
-            DialogueManager.ins.NewDialogue("I am not strong enough to push this!");
+			DialogueManager.ins.NewDialogue("I am not strong enough to push this!\nMaybe Chuck could push it.");
     }
 }
