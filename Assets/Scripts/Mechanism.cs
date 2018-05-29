@@ -46,7 +46,7 @@ public class Mechanism : Interactable {
                     door2.GetComponent<Animator>().SetBool("down", true);
                     state = 1;
                 } else
-                    DialogueManager.ins.NewDialogue("The mechanism seems to work with only one person...");
+                    DialogueManager.ins.NewDialogue("The mechanism seems to work with only one person on it...");
                 break;
             case 1:
                 int player2 = CharacterSwap.ins.CharacterBetween(m2l.position.x, m2r.position.x);
@@ -57,7 +57,7 @@ public class Mechanism : Interactable {
                     door2.GetComponent<Animator>().SetBool("down", false);
                     state = 0;
                 } else
-                    DialogueManager.ins.NewDialogue("The mechanism seems to work with only one person...");
+                    DialogueManager.ins.NewDialogue("The mechanism seems to work with only one person on it...");
                 break;
             default:
                 Debug.LogError("Error in mechanism state!");

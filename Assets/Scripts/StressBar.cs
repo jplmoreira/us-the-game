@@ -17,12 +17,14 @@ public class StressBar : MonoBehaviour {
     public GameObject gameOver;
 
 	float width;
+    bool reset = false;
 
 
     IEnumerator playStressBarSoundEffect(string name){
         
         yield return new WaitForSeconds(9);
-        audioManager.Play(name);
+        if (!reset)
+            audioManager.Play(name);
     }
 
     private void Awake() {
@@ -34,6 +36,7 @@ public class StressBar : MonoBehaviour {
     
     
     public void increment (int amount) { //assume que evento falhou
+        reset = false;
         currentStress += amount;
         
         
@@ -137,5 +140,20 @@ public class StressBar : MonoBehaviour {
 				stressBar.sizeDelta = new Vector2((currentStress/100)*width, stressBar.sizeDelta.y);
                 break;
         }
+    }
+
+    public void zero() {
+        currentStress = 0;
+        checkpoint = 0;
+        stressBar.sizeDelta = new Vector2(0f, stressBar.sizeDelta.y);
+        reset = true;
+        audioManager.Stop("DoorCloses");
+        audioManager.Stop("LaughWoman2");
+        audioManager.Stop("DoorSqueack");
+        audioManager.Stop("LaughStepsSinging");
+        audioManager.Stop("LaughWitch");
+        audioManager.Stop("Heartbeat");
+        vigAnim.speed = 1f;
+        vignette.SetActive(false);
     }
 }

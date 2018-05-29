@@ -222,6 +222,13 @@ public class CharacterSwap : MonoBehaviour {
                 return;
         }
     }
+
+    public void ChangePosition(Vector3 pos) {
+        pos1 = pos;
+        pos2 = pos;
+        pos3 = pos;
+        pos4 = pos;
+    }
 }
 
 public class CharacterSwapArgs : EventArgs {
